@@ -1,0 +1,712 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.1.2 and Furo 2023.08.19 -->
+        <title>src.ai.whylabs.container package - whylogs-container-python 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">whylogs-container-python 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">whylogs-container-python 0.0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="src-ai-whylabs-container-package">
+<h1>src.ai.whylabs.container package<a class="headerlink" href="#src-ai-whylabs-container-package" title="Permalink to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="module-src.ai.whylabs.container.auth">
+<span id="src-ai-whylabs-container-auth-module"></span><h2>src.ai.whylabs.container.auth module<a class="headerlink" href="#module-src.ai.whylabs.container.auth" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.auth.Auth">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.auth.</span></span><span class="sig-name descname"><span class="pre">Auth</span></span><a class="headerlink" href="#src.ai.whylabs.container.auth.Auth" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.auth.Auth.api_key_auth">
+<span class="sig-name descname"><span class="pre">api_key_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(OAuth2PasswordBearer)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.auth.Auth.api_key_auth" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.ai.whylabs.container.config">
+<span id="src-ai-whylabs-container-config-module"></span><h2>src.ai.whylabs.container.config module<a class="headerlink" href="#module-src.ai.whylabs.container.config" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">ContainerConfig</span></span><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.auth_disabled">
+<span class="sig-name descname"><span class="pre">auth_disabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.auth_disabled" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.container_password">
+<span class="sig-name descname"><span class="pre">container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.container_password" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.default_dataset_cadence">
+<span class="sig-name descname"><span class="pre">default_dataset_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetCadence</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.default_dataset_cadence" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.default_openai_api_key">
+<span class="sig-name descname"><span class="pre">default_openai_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.default_openai_api_key" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.default_openai_organization">
+<span class="sig-name descname"><span class="pre">default_openai_organization</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.default_openai_organization" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.default_whylabs_upload_cadence">
+<span class="sig-name descname"><span class="pre">default_whylabs_upload_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.default_whylabs_upload_cadence" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval">
+<span class="sig-name descname"><span class="pre">default_whylabs_upload_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.disable_container_password">
+<span class="sig-name descname"><span class="pre">disable_container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.disable_container_password" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.fail_startup_without_config">
+<span class="sig-name descname"><span class="pre">fail_startup_without_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.fail_startup_without_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.whylabs_api_key">
+<span class="sig-name descname"><span class="pre">whylabs_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.whylabs_api_key" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.ContainerConfig.whylabs_org_id">
+<span class="sig-name descname"><span class="pre">whylabs_org_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.ContainerConfig.whylabs_org_id" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">EnvVarNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>This Enum class contains all the environment variable names used in the application.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD">
+<span class="sig-name descname"><span class="pre">CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
+<dd><p>Password for the container. The contaienr looks for this password in a header for each request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_DATASET_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_DATASET_CADENCE'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE" title="Permalink to this definition">#</a></dt>
+<dd><p>Can be DAILY (default) or HOURLY. This is used whenever the cadence is not
+specified in the dataset schema, or if you don’t specify a dataset schema.
+This determines how data is bucketed in the container. Data for each profile
+will be pooled by the hour, minute, or day.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_CADENCE'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE" title="Permalink to this definition">#</a></dt>
+<dd><p>Can be H (default), M, or D. This determines how often profiles are uploaded to WhyLabs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_INTERVAL'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL" title="Permalink to this definition">#</a></dt>
+<dd><p>Default interval for WhyLabs uploads. This determines how many units of time (hours, minutes, or days)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD">
+<span class="sig-name descname"><span class="pre">DISABLE_CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DISABLE_CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
+<dd><p>If set to True, the container will not require a password for requests. Then you can omit the <cite>CONTAINER_PASSWORD</cite>
+environment variable.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG">
+<span class="sig-name descname"><span class="pre">FAIL_STARTUP_WITHOUT_CONFIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FAIL_STARTUP_WITHOUT_CONFIG'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG" title="Permalink to this definition">#</a></dt>
+<dd><p>If set to True, the container will fail to start if no custom configuration is found. This is a safeguard if you
+want to make sure you set up the container correctly and you’re using python to configure dataset schemas for
+whylogs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.OPENAI_API_KEY">
+<span class="sig-name descname"><span class="pre">OPENAI_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPENAI_API_KEY'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.OPENAI_API_KEY" title="Permalink to this definition">#</a></dt>
+<dd><p>API key for OpenAI. Only applies if you’re using LLM/Openapi monitoring.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.OPENAI_ORGANIZATION">
+<span class="sig-name descname"><span class="pre">OPENAI_ORGANIZATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPENAI_ORGANIZATION'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.OPENAI_ORGANIZATION" title="Permalink to this definition">#</a></dt>
+<dd><p>Organization ID for OpenAI. Only applies if you’re using LLM/Openapi monitoring.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY">
+<span class="sig-name descname"><span class="pre">WHYLABS_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_API_KEY'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY" title="Permalink to this definition">#</a></dt>
+<dd><p>API key for WhyLabs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.WHYLABS_ORG_ID">
+<span class="sig-name descname"><span class="pre">WHYLABS_ORG_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_ORG_ID'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.WHYLABS_ORG_ID" title="Permalink to this definition">#</a></dt>
+<dd><p>Organization ID for WhyLabs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config.get_dataset_options">
+<span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">get_dataset_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.config.get_dataset_options" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-src.ai.whylabs.container.config_test">
+<span id="src-ai-whylabs-container-config-test-module"></span><h2>src.ai.whylabs.container.config_test module<a class="headerlink" href="#module-src.ai.whylabs.container.config_test" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.config_test.test_indexing_into_toolkit">
+<span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.config_test.</span></span><span class="sig-name descname"><span class="pre">test_indexing_into_toolkit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.config_test.test_indexing_into_toolkit" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-src.ai.whylabs.container.requests">
+<span id="src-ai-whylabs-container-requests-module"></span><h2>src.ai.whylabs.container.requests module<a class="headerlink" href="#module-src.ai.whylabs.container.requests" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogEmbeddingRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogEmbeddingRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embeddings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogEmbeddingRequest.datasetId">
+<span class="sig-name descname"><span class="pre">datasetId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest.datasetId" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogEmbeddingRequest.embeddings">
+<span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest.embeddings" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogEmbeddingRequest.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest.timestamp" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogMultiple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogMultiple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.requests.LogMultiple" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogMultiple.columns">
+<span class="sig-name descname"><span class="pre">columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogMultiple.columns" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogMultiple.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogMultiple.data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.ai.whylabs.container.requests.LogMultiple" title="src.ai.whylabs.container.requests.LogMultiple"><span class="pre">LogMultiple</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.requests.LogRequest" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogRequest.datasetId">
+<span class="sig-name descname"><span class="pre">datasetId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogRequest.datasetId" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogRequest.multiple">
+<span class="sig-name descname"><span class="pre">multiple</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#src.ai.whylabs.container.requests.LogMultiple" title="src.ai.whylabs.container.requests.LogMultiple"><span class="pre">LogMultiple</span></a></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogRequest.multiple" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.LogRequest.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.LogRequest.timestamp" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.OpenAIRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">OpenAIRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'user'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.requests.OpenAIRequest" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.OpenAIRequest.prompt">
+<span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.OpenAIRequest.prompt" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.OpenAIRequest.role">
+<span class="sig-name descname"><span class="pre">role</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.OpenAIRequest.role" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.OpenAIRequest.temperature">
+<span class="sig-name descname"><span class="pre">temperature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.OpenAIRequest.temperature" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubMessage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">PubSubMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubMessage" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubMessage.attributes">
+<span class="sig-name descname"><span class="pre">attributes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubMessage.attributes" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubMessage.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubMessage.data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubMessage.messageId">
+<span class="sig-name descname"><span class="pre">messageId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubMessage.messageId" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubMessage.publishTime">
+<span class="sig-name descname"><span class="pre">publishTime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubMessage.publishTime" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">PubSubRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscription</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage" title="src.ai.whylabs.container.requests.PubSubMessage"><span class="pre">PubSubMessage</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubRequest" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubRequest.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage" title="src.ai.whylabs.container.requests.PubSubMessage"><span class="pre">PubSubMessage</span></a></em><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubRequest.message" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.requests.PubSubRequest.subscription">
+<span class="sig-name descname"><span class="pre">subscription</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#src.ai.whylabs.container.requests.PubSubRequest.subscription" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.ai.whylabs.container.routes">
+<span id="src-ai-whylabs-container-routes-module"></span><h2>src.ai.whylabs.container.routes module<a class="headerlink" href="#module-src.ai.whylabs.container.routes" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.health">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">health</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.health" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.log">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.log" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.log_debug_info">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_debug_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.log_debug_info" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.log_docs">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_docs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#src.ai.whylabs.container.requests.LogRequest" title="src.ai.whylabs.container.requests.LogRequest"><span class="pre">LogRequest</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.log_docs" title="Permalink to this definition">#</a></dt>
+<dd><p>This endpoint is a bit silly. I can’t find an easy way of manually controlling endpoint docs in the generated swagger
+and I can’t declare /log’s body as LogRequest because that has the side effect of also performing serde automatically,
+which performs far too poorly to keep in the server process. This endpoint is just for swagger docs on the body type
+for convenience, but it shouldn’t actually be used.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.log_embeddings">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.log_embeddings" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.log_pubsub">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_pubsub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.log_pubsub" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.log_pubsub_embeddings">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_pubsub_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.log_pubsub_embeddings" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.openai_proxy">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">openai_proxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whylabs_dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.openai_proxy" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.publish_profiles">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">publish_profiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.publish_profiles" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.routes.shutdown">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.routes.shutdown" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-src.ai.whylabs.container.startup">
+<span id="src-ai-whylabs-container-startup-module"></span><h2>src.ai.whylabs.container.startup module<a class="headerlink" href="#module-src.ai.whylabs.container.startup" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.startup.init_logging">
+<span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">init_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.startup.init_logging" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ai.whylabs.container.startup.update_pid">
+<span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">update_pid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">act</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="src.ai.whylabs.actor.html#src.ai.whylabs.actor.actor.Actor" title="src.ai.whylabs.actor.actor.Actor"><span class="pre">Actor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ai.whylabs.container.startup.update_pid" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-src.ai.whylabs.container">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.ai.whylabs.container" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, WhyLabs
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">src.ai.whylabs.container package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container.auth">src.ai.whylabs.container.auth module</a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.auth.Auth"><code class="docutils literal notranslate"><span class="pre">Auth</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.auth.Auth.api_key_auth"><code class="docutils literal notranslate"><span class="pre">Auth.api_key_auth()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container.config">src.ai.whylabs.container.config module</a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig"><code class="docutils literal notranslate"><span class="pre">ContainerConfig</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.auth_disabled"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.auth_disabled()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.container_password</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.default_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_dataset_cadence</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.default_openai_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_openai_api_key</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.default_openai_organization"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_openai_organization</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.default_whylabs_upload_cadence"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_cadence</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_interval</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.disable_container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.disable_container_password</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.fail_startup_without_config"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.fail_startup_without_config</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.whylabs_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.whylabs_api_key</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.ContainerConfig.whylabs_org_id"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.whylabs_org_id</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames"><code class="docutils literal notranslate"><span class="pre">EnvVarNames</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.CONTAINER_PASSWORD</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DISABLE_CONTAINER_PASSWORD</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.OPENAI_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_API_KEY</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.OPENAI_ORGANIZATION"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_ORGANIZATION</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.WHYLABS_API_KEY</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.EnvVarNames.WHYLABS_ORG_ID"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.WHYLABS_ORG_ID</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config.get_dataset_options"><code class="docutils literal notranslate"><span class="pre">get_dataset_options()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container.config_test">src.ai.whylabs.container.config_test module</a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.config_test.test_indexing_into_toolkit"><code class="docutils literal notranslate"><span class="pre">test_indexing_into_toolkit()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container.requests">src.ai.whylabs.container.requests module</a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest.datasetId"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.datasetId</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest.embeddings"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.embeddings</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogEmbeddingRequest.timestamp"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.timestamp</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogMultiple"><code class="docutils literal notranslate"><span class="pre">LogMultiple</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogMultiple.columns"><code class="docutils literal notranslate"><span class="pre">LogMultiple.columns</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogMultiple.data"><code class="docutils literal notranslate"><span class="pre">LogMultiple.data</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogRequest"><code class="docutils literal notranslate"><span class="pre">LogRequest</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogRequest.datasetId"><code class="docutils literal notranslate"><span class="pre">LogRequest.datasetId</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogRequest.multiple"><code class="docutils literal notranslate"><span class="pre">LogRequest.multiple</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.LogRequest.timestamp"><code class="docutils literal notranslate"><span class="pre">LogRequest.timestamp</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.OpenAIRequest"><code class="docutils literal notranslate"><span class="pre">OpenAIRequest</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.OpenAIRequest.prompt"><code class="docutils literal notranslate"><span class="pre">OpenAIRequest.prompt</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.OpenAIRequest.role"><code class="docutils literal notranslate"><span class="pre">OpenAIRequest.role</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.OpenAIRequest.temperature"><code class="docutils literal notranslate"><span class="pre">OpenAIRequest.temperature</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage"><code class="docutils literal notranslate"><span class="pre">PubSubMessage</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage.attributes"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.attributes</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage.data"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.data</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage.messageId"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.messageId</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubMessage.publishTime"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.publishTime</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubRequest"><code class="docutils literal notranslate"><span class="pre">PubSubRequest</span></code></a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubRequest.message"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.message</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.requests.PubSubRequest.subscription"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.subscription</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container.routes">src.ai.whylabs.container.routes module</a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.health"><code class="docutils literal notranslate"><span class="pre">health()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.log_debug_info"><code class="docutils literal notranslate"><span class="pre">log_debug_info()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.log_docs"><code class="docutils literal notranslate"><span class="pre">log_docs()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.log_embeddings"><code class="docutils literal notranslate"><span class="pre">log_embeddings()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.log_pubsub"><code class="docutils literal notranslate"><span class="pre">log_pubsub()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.log_pubsub_embeddings"><code class="docutils literal notranslate"><span class="pre">log_pubsub_embeddings()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.openai_proxy"><code class="docutils literal notranslate"><span class="pre">openai_proxy()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.publish_profiles"><code class="docutils literal notranslate"><span class="pre">publish_profiles()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.routes.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container.startup">src.ai.whylabs.container.startup module</a><ul>
+<li><a class="reference internal" href="#src.ai.whylabs.container.startup.init_logging"><code class="docutils literal notranslate"><span class="pre">init_logging()</span></code></a></li>
+<li><a class="reference internal" href="#src.ai.whylabs.container.startup.update_pid"><code class="docutils literal notranslate"><span class="pre">update_pid()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.ai.whylabs.container">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f6245a2f"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>
