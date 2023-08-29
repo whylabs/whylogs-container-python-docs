@@ -274,6 +274,25 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">EnvVarNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
 <p>This Enum class contains all the environment variable names used in the application.</p>
+<section id="required">
+<h3>Required<a class="headerlink" href="#required" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><cite>WHYLABS_API_KEY</cite></p></li>
+<li><p><cite>WHYLABS_ORG_ID</cite></p></li>
+</ul>
+</section>
+<section id="optional">
+<h3>Optional<a class="headerlink" href="#optional" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><cite>DEFAULT_WHYLABS_DATASET_CADENCE</cite></p></li>
+<li><p><cite>DEFAULT_WHYLABS_UPLOAD_CADENCE</cite></p></li>
+<li><p><cite>DEFAULT_WHYLABS_UPLOAD_INTERVAL</cite></p></li>
+<li><p><cite>CONTAINER_PASSWORD</cite>. Required if DISABLE_CONTAINER_PASSWORD is not set to True.</p></li>
+<li><p><cite>DISABLE_CONTAINER_PASSWORD</cite></p></li>
+<li><p><cite>FAIL_STARTUP_WITHOUT_CONFIG</cite></p></li>
+<li><p><cite>OPENAI_API_KEY</cite>. Required if you’re using LLM/Openapi monitoring.</p></li>
+<li><p><cite>OPENAI_ORGANIZATION</cite>. Required if you’re using LLM/Openapi monitoring.</p></li>
+</ul>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD">
 <span class="sig-name descname"><span class="pre">CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
@@ -331,15 +350,16 @@ whylogs.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY">
 <span class="sig-name descname"><span class="pre">WHYLABS_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_API_KEY'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY" title="Permalink to this definition">#</a></dt>
-<dd><p>API key for WhyLabs.</p>
+<dd><p>Required. API key for WhyLabs.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="src.ai.whylabs.container.config.EnvVarNames.WHYLABS_ORG_ID">
 <span class="sig-name descname"><span class="pre">WHYLABS_ORG_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_ORG_ID'</span></em><a class="headerlink" href="#src.ai.whylabs.container.config.EnvVarNames.WHYLABS_ORG_ID" title="Permalink to this definition">#</a></dt>
-<dd><p>Organization ID for WhyLabs.</p>
+<dd><p>Required. Organization ID for WhyLabs.</p>
 </dd></dl>
 
+</section>
 </dd></dl>
 
 <dl class="py function">
