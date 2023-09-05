@@ -1,5 +1,5 @@
-src.ai package
-==============
+whylogs\_container package
+==========================
 
 Subpackages
 -----------
@@ -7,13 +7,13 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   src.ai.util
-   src.ai.whylabs
+   whylogs_container.util
+   whylogs_container.whylabs
 
 Module contents
 ---------------
 
-.. automodule:: src.ai
+.. automodule:: whylogs_container
    :members:
    :undoc-members:
    :show-inheritance:
