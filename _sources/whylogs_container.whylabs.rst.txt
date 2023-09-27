@@ -9,6 +9,7 @@ Subpackages
 
    whylogs_container.whylabs.actor
    whylogs_container.whylabs.container
+   whylogs_container.whylabs.llm_validation
 
 Module contents
 ---------------

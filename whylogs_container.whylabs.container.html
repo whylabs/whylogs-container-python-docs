@@ -258,6 +258,16 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.llm_container">
+<span class="sig-name descname"><span class="pre">llm_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.llm_container" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.llm_endpoint_enabled">
+<span class="sig-name descname"><span class="pre">llm_endpoint_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.llm_endpoint_enabled" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.whylabs_api_key">
 <span class="sig-name descname"><span class="pre">whylabs_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.whylabs_api_key" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -334,6 +344,13 @@ environment variable.</p>
 <dd><p>If set to True, the container will fail to start if no custom configuration is found. This is a safeguard if you
 want to make sure you set up the container correctly and you’re using python to configure dataset schemas for
 whylogs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.LLM_CONTAINER">
+<span class="sig-name descname"><span class="pre">LLM_CONTAINER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLM_CONTAINER'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.LLM_CONTAINER" title="Permalink to this definition">#</a></dt>
+<dd><p>Env var to identify if the deployment is of the type LLM or not. Defaults to False, but set to 
+True on LLM image build</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -569,6 +586,11 @@ for convenience, but it shouldn’t actually be used.</p>
 <dd></dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.openai_validation">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">openai_validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whylabs_dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.openai_validation" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.publish_profiles">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">publish_profiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.publish_profiles" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -654,6 +676,8 @@ for convenience, but it shouldn’t actually be used.</p>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_interval</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.disable_container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.disable_container_password</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.fail_startup_without_config"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.fail_startup_without_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.llm_container"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.llm_container</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.llm_endpoint_enabled"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.llm_endpoint_enabled()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.whylabs_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.whylabs_api_key</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.whylabs_org_id"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.whylabs_org_id</span></code></a></li>
 </ul>
@@ -665,6 +689,7 @@ for convenience, but it shouldn’t actually be used.</p>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DISABLE_CONTAINER_PASSWORD</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.LLM_CONTAINER"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.LLM_CONTAINER</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BATCH_SIZE</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BUFFER_BYTES"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BUFFER_BYTES</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_API_KEY</span></code></a></li>
@@ -727,6 +752,7 @@ for convenience, but it shouldn’t actually be used.</p>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_pubsub"><code class="docutils literal notranslate"><span class="pre">log_pubsub()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_pubsub_embeddings"><code class="docutils literal notranslate"><span class="pre">log_pubsub_embeddings()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.openai_proxy"><code class="docutils literal notranslate"><span class="pre">openai_proxy()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.openai_validation"><code class="docutils literal notranslate"><span class="pre">openai_validation()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.publish_profiles"><code class="docutils literal notranslate"><span class="pre">publish_profiles()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
 </ul>
