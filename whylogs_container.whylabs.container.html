@@ -200,7 +200,7 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.auth.Auth.api_key_auth">
-<span class="sig-name descname"><span class="pre">api_key_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(OAuth2PasswordBearer)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.auth.Auth.api_key_auth" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">api_key_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(APIKeyHeader)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.auth.Auth.api_key_auth" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -419,7 +419,7 @@ on the host and nothing better to do with it.</p>
 <span id="whylogs-container-whylabs-container-requests-module"></span><h2>whylogs_container.whylabs.container.requests module<a class="headerlink" href="#module-whylogs_container.whylabs.container.requests" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogEmbeddingRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embeddings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogEmbeddingRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embeddings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.datasetId">
@@ -428,7 +428,7 @@ on the host and nothing better to do with it.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.embeddings">
-<span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.embeddings" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.embeddings" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -549,7 +549,54 @@ on the host and nothing better to do with it.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Profile tabular data. The Swagger UI isn’t able to call this currently.</p>
+<p>## Sample curl request:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>bash
+curl -X ‘POST’     -H “X-API-Key: &lt;password&gt;”     -H “Content-Type: application/json”     ‘<a class="reference external" href="http://localhost:8000/log">http://localhost:8000/log</a>’     –data-raw ‘{</p>
+<blockquote>
+<div><p>“datasetId”: “model-62”,
+“multiple”: {</p>
+<blockquote>
+<div><p>“columns”: [ “age”, “workclass”, “fnlwgt”, “education” ],
+“data”: [</p>
+<blockquote>
+<div><p>[ 25, “Private”, 226802, “11th” ]</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<section id="id5">
+<h3>}’<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>## Sample Python request:
+<a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a>python
+import requests</p>
+<p># Define your API key
+api_key = “&lt;password&gt;”</p>
+<p># API endpoint
+url = ‘<a class="reference external" href="http://localhost:8000/log">http://localhost:8000/log</a>’</p>
+<p># Sample data
+data = {</p>
+<blockquote>
+<div><p>“datasetId”: “model-62”,
+“multiple”: {</p>
+<blockquote>
+<div><p>“columns”: [“age”, “workclass”, “fnlwgt”, “education”],
+“data”: [</p>
+<blockquote>
+<div><p>[25, “Private”, 226802, “11th”]</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+<p># Make the POST request
+headers = {“X-API-Key”: api_key}
+response = requests.post(url, json=data, headers=headers)
+<a href="#id10"><span class="problematic" id="id11">``</span></a><a href="#id12"><span class="problematic" id="id13">`</span></a></p>
+</section>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_debug_info">
@@ -557,18 +604,64 @@ on the host and nothing better to do with it.</p>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_docs">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_docs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest" title="whylogs_container.whylabs.container.requests.LogRequest"><span class="pre">LogRequest</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_docs" title="Permalink to this definition">#</a></dt>
-<dd><p>This endpoint is a bit silly. I can’t find an easy way of manually controlling endpoint docs in the generated swagger
-and I can’t declare /log’s body as LogRequest because that has the side effect of also performing serde automatically,
-which performs far too poorly to keep in the server process. This endpoint is just for swagger docs on the body type
-for convenience, but it shouldn’t actually be used.</p>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_embeddings">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_embeddings" title="Permalink to this definition">#</a></dt>
+<dd><p>This endpoint requires a custom configuration to set up before hand. See <a class="reference external" href="https://docs.whylabs.ai/docs/integrations-whylogs-container/">https://docs.whylabs.ai/docs/integrations-whylogs-container/</a> 
+for setting up embeddings support.</p>
+<p>Log embeddings data. The Swagger UI isn’t able to call this currently.</p>
+<p>## Sample curl request:</p>
+<p><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a>bash
+curl -X ‘POST’     -H “X-API-Key: &lt;password&gt;”     -H “Content-Type: application/json”     ‘<a class="reference external" href="http://localhost:8000/log-embeddings">http://localhost:8000/log-embeddings</a>’     –data-raw ‘{</p>
+<blockquote>
+<div><p>“datasetId”: “model-62”,
+“timestamp”: 1634235000,
+“embeddings”: {</p>
+<blockquote>
+<div><p>“embeddings”: [[0.12, 0.45, 0.33, 0.92]]</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<section id="id18">
+<h3>}’<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
+<p>## Sample Python request:
+<a href="#id19"><span class="problematic" id="id20">``</span></a><a href="#id21"><span class="problematic" id="id22">`</span></a>python
+import requests</p>
+<p># Define your API key
+api_key = “&lt;password&gt;”</p>
+<p># API endpoint
+url = ‘<a class="reference external" href="http://localhost:8000/log-embeddings">http://localhost:8000/log-embeddings</a>’</p>
+<p># Sample data
+data = {</p>
+<blockquote>
+<div><p>“datasetId”: “model-62”,
+“timestamp”: 1634235000,  # an example timestamp
+“embeddings”: {</p>
+<blockquote>
+<div><p>“embeddings”: [[0.12, 0.45, 0.33, 0.92]]</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+<p># Make the POST request
+headers = {“X-API-Key”: api_key, “Content-Type”: “application/json”}
+response = requests.post(url, json=data, headers=headers)
+<a href="#id23"><span class="problematic" id="id24">``</span></a><a href="#id25"><span class="problematic" id="id26">`</span></a></p>
+</section>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_embeddings">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_embeddings" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_embeddings_json">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_embeddings_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest" title="whylogs_container.whylabs.container.requests.LogEmbeddingRequest"><span class="pre">LogEmbeddingRequest</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_embeddings_json" title="Permalink to this definition">#</a></dt>
+<dd><p>Use this endpoint for manually testing and experimenting. It shouldn’t be used in production
+because it has a steep performance penalty compared to the normal /log-embeddings endpoint.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_json">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest" title="whylogs_container.whylabs.container.requests.LogRequest"><span class="pre">LogRequest</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_json" title="Permalink to this definition">#</a></dt>
+<dd><p>Use this endpoint for manually testing and experimenting. It shouldn’t be used in production
+because it has a steep performance penalty compared to the normal /log endpoint.</p>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_pubsub">
@@ -747,8 +840,9 @@ for convenience, but it shouldn’t actually be used.</p>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.health"><code class="docutils literal notranslate"><span class="pre">health()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_debug_info"><code class="docutils literal notranslate"><span class="pre">log_debug_info()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_docs"><code class="docutils literal notranslate"><span class="pre">log_docs()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_embeddings"><code class="docutils literal notranslate"><span class="pre">log_embeddings()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_embeddings_json"><code class="docutils literal notranslate"><span class="pre">log_embeddings_json()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_json"><code class="docutils literal notranslate"><span class="pre">log_json()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_pubsub"><code class="docutils literal notranslate"><span class="pre">log_pubsub()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_pubsub_embeddings"><code class="docutils literal notranslate"><span class="pre">log_pubsub_embeddings()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.openai_proxy"><code class="docutils literal notranslate"><span class="pre">openai_proxy()</span></code></a></li>
