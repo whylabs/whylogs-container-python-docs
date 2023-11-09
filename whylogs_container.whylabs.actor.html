@@ -242,11 +242,16 @@
 <span id="whylogs-container-whylabs-actor-preset-schema-module"></span><h2>whylogs_container.whylabs.actor.preset_schema module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.preset_schema" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.preset_schema.</span></span><span class="sig-name descname"><span class="pre">PresetSchema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llm_dataset_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.preset_schema.</span></span><span class="sig-name descname"><span class="pre">PresetSchema</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema.default_llm_dataset_schema">
+<span class="sig-name descname"><span class="pre">default_llm_dataset_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.default_llm_dataset_schema" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_schema">
-<span class="sig-name descname"><span class="pre">get_default_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_schema" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_llm_schema">
+<span class="sig-name descname"><span class="pre">get_default_llm_schema</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_llm_schema" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -729,7 +734,8 @@ That assumption should be enforced before this is used by grouping by set of col
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.preset_schema">whylogs_container.whylabs.actor.preset_schema module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema"><code class="docutils literal notranslate"><span class="pre">PresetSchema</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_schema"><code class="docutils literal notranslate"><span class="pre">PresetSchema.get_default_schema()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.default_llm_dataset_schema"><code class="docutils literal notranslate"><span class="pre">PresetSchema.default_llm_dataset_schema</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_llm_schema"><code class="docutils literal notranslate"><span class="pre">PresetSchema.get_default_llm_schema()</span></code></a></li>
 </ul>
 </li>
 </ul>
