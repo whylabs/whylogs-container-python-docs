@@ -238,25 +238,6 @@
 <dd></dd></dl>
 
 </section>
-<section id="module-whylogs_container.whylabs.actor.preset_schema">
-<span id="whylogs-container-whylabs-actor-preset-schema-module"></span><h2>whylogs_container.whylabs.actor.preset_schema module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.preset_schema" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.preset_schema.</span></span><span class="sig-name descname"><span class="pre">PresetSchema</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema.default_llm_dataset_schema">
-<span class="sig-name descname"><span class="pre">default_llm_dataset_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.default_llm_dataset_schema" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_llm_schema">
-<span class="sig-name descname"><span class="pre">get_default_llm_schema</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_llm_schema" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</section>
 <section id="module-whylogs_container.whylabs.actor.profile_actor">
 <span id="whylogs-container-whylabs-actor-profile-actor-module"></span><h2>whylogs_container.whylabs.actor.profile_actor module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.profile_actor" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
@@ -317,6 +298,12 @@
 <dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_raw_log_dicts">
 <span class="sig-name descname"><span class="pre">process_raw_log_dicts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage"><span class="pre">RawLogMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_raw_log_dicts" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -732,14 +719,6 @@ That assumption should be enforced before this is used by grouping by set of col
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.start_actor"><code class="docutils literal notranslate"><span class="pre">start_actor()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.preset_schema">whylogs_container.whylabs.actor.preset_schema module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema"><code class="docutils literal notranslate"><span class="pre">PresetSchema</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.default_llm_dataset_schema"><code class="docutils literal notranslate"><span class="pre">PresetSchema.default_llm_dataset_schema</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.preset_schema.PresetSchema.get_default_llm_schema"><code class="docutils literal notranslate"><span class="pre">PresetSchema.get_default_llm_schema()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.profile_actor">whylogs_container.whylabs.actor.profile_actor module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor"><code class="docutils literal notranslate"><span class="pre">ProfileActor</span></code></a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_batch"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_batch()</span></code></a></li>
@@ -753,6 +732,7 @@ That assumption should be enforced before this is used by grouping by set of col
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_pubsub()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub_embedding"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_pubsub_embedding()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_raw_log_dicts"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_raw_log_dicts()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.run"><code class="docutils literal notranslate"><span class="pre">ProfileActor.run()</span></code></a></li>
 </ul>
 </li>
 </ul>

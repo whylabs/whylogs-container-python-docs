@@ -12,14 +12,6 @@ whylogs\_container.whylabs.actor.actor module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.actor.preset\_schema module
-------------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.actor.preset_schema
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 whylogs\_container.whylabs.actor.profile\_actor module
 ------------------------------------------------------
 
