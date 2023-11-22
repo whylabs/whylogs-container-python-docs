@@ -209,79 +209,121 @@
 <section id="module-whylogs_container.whylabs.container.config">
 <span id="whylogs-container-whylabs-container-config-module"></span><h2>whylogs_container.whylabs.container.config module<a class="headerlink" href="#module-whylogs_container.whylabs.container.config" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">ContainerConfig</span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerSchemas">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">ContainerSchemas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schemas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">whylabs_toolkit.container.config_types.DatasetOptions</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_schemas</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">whylabs_toolkit.container.config_types.DatasetOptions</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerSchemas" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerSchemas.schemas">
+<span class="sig-name descname"><span class="pre">schemas</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerSchemas.schemas" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerSchemas.validation_schemas">
+<span class="sig-name descname"><span class="pre">validation_schemas</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerSchemas.validation_schemas" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.get_dataset_options">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">get_dataset_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.get_dataset_options" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.get_llm_validation_options">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">get_llm_validation_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.get_llm_validation_options" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.init">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.init" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-whylogs_container.whylabs.container.config_test">
+<span id="whylogs-container-whylabs-container-config-test-module"></span><h2>whylogs_container.whylabs.container.config_test module<a class="headerlink" href="#module-whylogs_container.whylabs.container.config_test" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config_test.</span></span><span class="sig-name descname"><span class="pre">test_indexing_into_toolkit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-whylogs_container.whylabs.container.environment">
+<span id="whylogs-container-whylabs-container-environment-module"></span><h2>whylogs_container.whylabs.container.environment module<a class="headerlink" href="#module-whylogs_container.whylabs.container.environment" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.environment.</span></span><span class="sig-name descname"><span class="pre">ContainerConfig</span></span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.assert_llm_endpoint">
-<span class="sig-name descname"><span class="pre">assert_llm_endpoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.assert_llm_endpoint" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.assert_llm_endpoint">
+<span class="sig-name descname"><span class="pre">assert_llm_endpoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.assert_llm_endpoint" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.auth_disabled">
-<span class="sig-name descname"><span class="pre">auth_disabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.auth_disabled" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.auth_disabled">
+<span class="sig-name descname"><span class="pre">auth_disabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.auth_disabled" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.container_password">
-<span class="sig-name descname"><span class="pre">container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.container_password" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.container_password">
+<span class="sig-name descname"><span class="pre">container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.container_password" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.default_dataset_cadence">
-<span class="sig-name descname"><span class="pre">default_dataset_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetCadence</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_dataset_cadence" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.default_dataset_cadence">
+<span class="sig-name descname"><span class="pre">default_dataset_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetCadence</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_dataset_cadence" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.default_openai_api_key">
-<span class="sig-name descname"><span class="pre">default_openai_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_openai_api_key" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.default_openai_api_key">
+<span class="sig-name descname"><span class="pre">default_openai_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_openai_api_key" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.default_openai_organization">
-<span class="sig-name descname"><span class="pre">default_openai_organization</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_openai_organization" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.default_openai_organization">
+<span class="sig-name descname"><span class="pre">default_openai_organization</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_openai_organization" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_org_id">
-<span class="sig-name descname"><span class="pre">default_whylabs_org_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_org_id" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_org_id">
+<span class="sig-name descname"><span class="pre">default_whylabs_org_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_org_id" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_cadence">
-<span class="sig-name descname"><span class="pre">default_whylabs_upload_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_cadence" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_upload_cadence">
+<span class="sig-name descname"><span class="pre">default_whylabs_upload_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_upload_cadence" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval">
-<span class="sig-name descname"><span class="pre">default_whylabs_upload_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_upload_interval">
+<span class="sig-name descname"><span class="pre">default_whylabs_upload_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_upload_interval" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.disable_container_password">
-<span class="sig-name descname"><span class="pre">disable_container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.disable_container_password" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.disable_container_password">
+<span class="sig-name descname"><span class="pre">disable_container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.disable_container_password" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.fail_startup_without_config">
-<span class="sig-name descname"><span class="pre">fail_startup_without_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.fail_startup_without_config" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.fail_startup_without_config">
+<span class="sig-name descname"><span class="pre">fail_startup_without_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.fail_startup_without_config" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.llm_container">
-<span class="sig-name descname"><span class="pre">llm_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.llm_container" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.llm_container">
+<span class="sig-name descname"><span class="pre">llm_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.llm_container" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ContainerConfig.whylabs_api_key">
-<span class="sig-name descname"><span class="pre">whylabs_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.ContainerConfig.whylabs_api_key" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.ContainerConfig.whylabs_api_key">
+<span class="sig-name descname"><span class="pre">whylabs_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.ContainerConfig.whylabs_api_key" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">EnvVarNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.environment.</span></span><span class="sig-name descname"><span class="pre">EnvVarNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
 <p>This Enum class contains all the environment variable names used in the application.</p>
 <section id="required">
@@ -304,15 +346,15 @@
 <li><p><cite>OPENAI_ORGANIZATION</cite>. Required if you’re using LLM/Openapi monitoring.</p></li>
 </ul>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD">
-<span class="sig-name descname"><span class="pre">CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD">
+<span class="sig-name descname"><span class="pre">CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
 <dd><p>Password for the container. The container looks for this password in a header for each request. This is the curl
 format for sending the header: <cite>-H “Authorization: Bearer my_password”</cite></p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_DATASET_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_DATASET_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_DATASET_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_DATASET_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Can be DAILY (default) or HOURLY. This is used whenever the cadence is not
 specified in the dataset schema, or if you don’t specify a dataset schema.
 This determines how data is bucketed in the container. Data for each profile
@@ -320,48 +362,48 @@ will be pooled by the hour, minute, or day.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_ORG_ID">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_ORG_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_ORG_ID'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_ORG_ID" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_ORG_ID">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_ORG_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_ORG_ID'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_ORG_ID" title="Permalink to this definition">#</a></dt>
 <dd><p>Required. Organization ID for WhyLabs.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE" title="Permalink to this definition">#</a></dt>
 <dd><p>Can be H (default), M, or D. This determines how often profiles are uploaded to WhyLabs.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_INTERVAL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL">
+<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_INTERVAL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL" title="Permalink to this definition">#</a></dt>
 <dd><p>Default interval for WhyLabs uploads. This determines how many units of time (hours, minutes, or days)</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD">
-<span class="sig-name descname"><span class="pre">DISABLE_CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DISABLE_CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_CONTAINER_PASSWORD">
+<span class="sig-name descname"><span class="pre">DISABLE_CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DISABLE_CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
 <dd><p>If set to True, the container will not require a password for requests. Then you can omit the <cite>CONTAINER_PASSWORD</cite>
 environment variable.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG">
-<span class="sig-name descname"><span class="pre">FAIL_STARTUP_WITHOUT_CONFIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FAIL_STARTUP_WITHOUT_CONFIG'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG">
+<span class="sig-name descname"><span class="pre">FAIL_STARTUP_WITHOUT_CONFIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FAIL_STARTUP_WITHOUT_CONFIG'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG" title="Permalink to this definition">#</a></dt>
 <dd><p>If set to True, the container will fail to start if no custom configuration is found. This is a safeguard if you
 want to make sure you set up the container correctly and you’re using python to configure dataset schemas for
 whylogs.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.LLM_CONTAINER">
-<span class="sig-name descname"><span class="pre">LLM_CONTAINER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLM_CONTAINER'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.LLM_CONTAINER" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER">
+<span class="sig-name descname"><span class="pre">LLM_CONTAINER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLM_CONTAINER'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER" title="Permalink to this definition">#</a></dt>
 <dd><p>Env var to identify if the deployment is of the type LLM or not. Defaults to False, but set to 
 True on LLM image build</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BATCH_SIZE">
-<span class="sig-name descname"><span class="pre">MAX_REQUEST_BATCH_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BATCH_SIZE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BATCH_SIZE" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BATCH_SIZE">
+<span class="sig-name descname"><span class="pre">MAX_REQUEST_BATCH_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BATCH_SIZE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BATCH_SIZE" title="Permalink to this definition">#</a></dt>
 <dd><p>Defaults to 50_000. Maximum number of requests to process per batch. Requests are placed onto a queue after they come in from the REST
 server process and they’re read from that queue by the whylogs process and handled in bulk. The larger the batch,
 the longer it takes to handle each batch. This is mostly transparent to callers. This ends up mattering when the
@@ -372,8 +414,8 @@ to our whylogs container doc page’s performance load testing numbers).</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BUFFER_BYTES">
-<span class="sig-name descname"><span class="pre">MAX_REQUEST_BUFFER_BYTES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BUFFER_BYTES'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BUFFER_BYTES" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES">
+<span class="sig-name descname"><span class="pre">MAX_REQUEST_BUFFER_BYTES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BUFFER_BYTES'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES" title="Permalink to this definition">#</a></dt>
 <dd><p>Defaults to 1_000_000_000 (1GB). The size of the buffer that requests are put onto after they come in from the REST server process. 
 Increasing this would give you more time to process requests before they start timing out. It could be a good idea
 to increase this number if you’re seeing request timeouts for spikey traffic patterns, or if you have more memory
@@ -381,43 +423,25 @@ on the host and nothing better to do with it.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_API_KEY">
-<span class="sig-name descname"><span class="pre">OPENAI_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPENAI_API_KEY'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_API_KEY" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.OPENAI_API_KEY">
+<span class="sig-name descname"><span class="pre">OPENAI_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPENAI_API_KEY'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.OPENAI_API_KEY" title="Permalink to this definition">#</a></dt>
 <dd><p>API key for OpenAI. Only applies if you’re using LLM/Openapi monitoring.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_ORGANIZATION">
-<span class="sig-name descname"><span class="pre">OPENAI_ORGANIZATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPENAI_ORGANIZATION'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_ORGANIZATION" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.OPENAI_ORGANIZATION">
+<span class="sig-name descname"><span class="pre">OPENAI_ORGANIZATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'OPENAI_ORGANIZATION'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.OPENAI_ORGANIZATION" title="Permalink to this definition">#</a></dt>
 <dd><p>Organization ID for OpenAI. Only applies if you’re using LLM/Openapi monitoring.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY">
-<span class="sig-name descname"><span class="pre">WHYLABS_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_API_KEY'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.WHYLABS_API_KEY">
+<span class="sig-name descname"><span class="pre">WHYLABS_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_API_KEY'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.WHYLABS_API_KEY" title="Permalink to this definition">#</a></dt>
 <dd><p>Required. API key for WhyLabs.</p>
 </dd></dl>
 
 </section>
 </dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.get_dataset_options">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">get_dataset_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.get_dataset_options" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.init">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.init" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</section>
-<section id="module-whylogs_container.whylabs.container.config_test">
-<span id="whylogs-container-whylabs-container-config-test-module"></span><h2>whylogs_container.whylabs.container.config_test module<a class="headerlink" href="#module-whylogs_container.whylabs.container.config_test" title="Permalink to this heading">#</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.config_test.</span></span><span class="sig-name descname"><span class="pre">test_indexing_into_toolkit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
 
 </section>
 <section id="module-whylogs_container.whylabs.container.requests">
@@ -764,44 +788,53 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.config">whylogs_container.whylabs.container.config module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig"><code class="docutils literal notranslate"><span class="pre">ContainerConfig</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.assert_llm_endpoint"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.assert_llm_endpoint()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.auth_disabled"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.auth_disabled()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.container_password</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_dataset_cadence</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_openai_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_openai_api_key</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_openai_organization"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_openai_organization</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_org_id"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_org_id</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_cadence"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_cadence</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.default_whylabs_upload_interval"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_interval</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.disable_container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.disable_container_password</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.fail_startup_without_config"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.fail_startup_without_config</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.llm_container"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.llm_container</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerConfig.whylabs_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.whylabs_api_key</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames"><code class="docutils literal notranslate"><span class="pre">EnvVarNames</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.CONTAINER_PASSWORD</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_ORG_ID"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_ORG_ID</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.DISABLE_CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DISABLE_CONTAINER_PASSWORD</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.LLM_CONTAINER"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.LLM_CONTAINER</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BATCH_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.MAX_REQUEST_BUFFER_BYTES"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BUFFER_BYTES</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_API_KEY</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.OPENAI_ORGANIZATION"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_ORGANIZATION</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.EnvVarNames.WHYLABS_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.WHYLABS_API_KEY</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerSchemas"><code class="docutils literal notranslate"><span class="pre">ContainerSchemas</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerSchemas.schemas"><code class="docutils literal notranslate"><span class="pre">ContainerSchemas.schemas</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ContainerSchemas.validation_schemas"><code class="docutils literal notranslate"><span class="pre">ContainerSchemas.validation_schemas</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.get_dataset_options"><code class="docutils literal notranslate"><span class="pre">get_dataset_options()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.get_llm_validation_options"><code class="docutils literal notranslate"><span class="pre">get_llm_validation_options()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.init"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.config_test">whylogs_container.whylabs.container.config_test module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit"><code class="docutils literal notranslate"><span class="pre">test_indexing_into_toolkit()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.container.environment">whylogs_container.whylabs.container.environment module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig"><code class="docutils literal notranslate"><span class="pre">ContainerConfig</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.assert_llm_endpoint"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.assert_llm_endpoint()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.auth_disabled"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.auth_disabled()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.container_password</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_dataset_cadence</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_openai_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_openai_api_key</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_openai_organization"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_openai_organization</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_org_id"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_org_id</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_upload_cadence"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_cadence</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.default_whylabs_upload_interval"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.default_whylabs_upload_interval</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.disable_container_password"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.disable_container_password</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.fail_startup_without_config"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.fail_startup_without_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.llm_container"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.llm_container</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.ContainerConfig.whylabs_api_key"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.whylabs_api_key</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames"><code class="docutils literal notranslate"><span class="pre">EnvVarNames</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.CONTAINER_PASSWORD</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_ORG_ID"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_ORG_ID</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DISABLE_CONTAINER_PASSWORD</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.LLM_CONTAINER</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BATCH_SIZE</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BUFFER_BYTES</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.OPENAI_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_API_KEY</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.OPENAI_ORGANIZATION"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.OPENAI_ORGANIZATION</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.WHYLABS_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.WHYLABS_API_KEY</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.requests">whylogs_container.whylabs.container.requests module</a><ul>

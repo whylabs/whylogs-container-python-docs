@@ -195,18 +195,13 @@
 <section id="module-whylogs_container.whylabs.llm_validation.config">
 <span id="whylogs-container-whylabs-llm-validation-config-module"></span><h2>whylogs_container.whylabs.llm_validation.config module<a class="headerlink" href="#module-whylogs_container.whylabs.llm_validation.config" title="Permalink to this heading">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config.build_actions">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config.</span></span><span class="sig-name descname"><span class="pre">build_actions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config.build_actions" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config.build_langkit_validator">
 <span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config.</span></span><span class="sig-name descname"><span class="pre">build_langkit_validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validation_rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationRule" title="whylogs_container.whylabs.llm_validation.metadata.ValidationRule"><span class="pre">ValidationRule</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.validators.ValidatorBuilder" title="whylogs_container.whylabs.llm_validation.validators.ValidatorBuilder"><span class="pre">ValidatorBuilder</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config.build_langkit_validator" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config.build_langkit_validators_dictionary">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config.</span></span><span class="sig-name descname"><span class="pre">build_langkit_validators_dictionary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parsed_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ConditionValidator</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config.build_langkit_validators_dictionary" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config.</span></span><span class="sig-name descname"><span class="pre">build_langkit_validators_dictionary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validation_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig"><span class="pre">ValidationConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">ConditionValidator</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config.build_langkit_validators_dictionary" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -216,7 +211,25 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config.validate_yaml">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config.</span></span><span class="sig-name descname"><span class="pre">validate_yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaml_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig"><span class="pre">ValidationConfig</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config.validate_yaml" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config.</span></span><span class="sig-name descname"><span class="pre">validate_yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaml_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="k"><span class="pre">False</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig"><span class="pre">ValidationConfig</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config.validate_yaml" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-whylogs_container.whylabs.llm_validation.config_parsing">
+<span id="whylogs-container-whylabs-llm-validation-config-parsing-module"></span><h2>whylogs_container.whylabs.llm_validation.config_parsing module<a class="headerlink" href="#module-whylogs_container.whylabs.llm_validation.config_parsing" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config_parsing.load_llm_profiling_options">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config_parsing.</span></span><span class="sig-name descname"><span class="pre">load_llm_profiling_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llm_config_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'whylogs_container/whylogs_config'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config_parsing.load_llm_profiling_options" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config_parsing.load_llm_validation_config_options">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config_parsing.</span></span><span class="sig-name descname"><span class="pre">load_llm_validation_config_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">llm_config_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'whylogs_container/whylogs_config'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config_parsing.load_llm_validation_config_options" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.config_parsing.load_yaml_data">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.config_parsing.</span></span><span class="sig-name descname"><span class="pre">load_yaml_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_directory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Generator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig"><span class="pre">ValidationConfig</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.config_parsing.load_yaml_data" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -244,8 +257,61 @@
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.metadata.ProfilingRule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.metadata.</span></span><span class="sig-name descname"><span class="pre">ProfilingRule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.metadata.ProfilingRule" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A ProfilingRule for a dataset-id that indicates which of langkit’s metrics should be
+used for profiling and monitoring in WhyLabs. In case the user doesn’t set it, the container will
+only work in validation mode.</p>
+<p><cite>metrics</cite> is a list of langkit’s metrics that will be used for profiling and monitoring in WhyLabs.
+To include all of the available metrics with <cite>langkit.llm_metrics</cite>, use the keyword <cite>all</cite>.
+This dataclass is used from the YAML parsing phase in the container setup.</p>
+<p>An example YAML file for this dataclass is defined below.</p>
+<p>Example 1:
+<a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>yaml
+whylabs_dataset_id: model-15
+policy: my_new_policy
+id: 9294f3fa-4f4b-4363-9397-87d3499fce28
+policy_version: 1
+schema_version: 0.0.1</p>
+<dl class="simple">
+<dt>profiling:</dt><dd><dl class="simple">
+<dt>metrics:</dt><dd><ul class="simple">
+<li><p>all</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>Example 1:
+<a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>yaml
+whylabs_dataset_id: model-15
+policy: my_new_policy
+id: 9294f3fa-4f4b-4363-9397-87d3499fce28
+policy_version: 1
+schema_version: 0.0.1</p>
+<dl class="simple">
+<dt>profiling:</dt><dd><dl class="simple">
+<dt>metrics:</dt><dd><ul class="simple">
+<li><p>toxicity</p></li>
+<li><p>textstat</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.metadata.ProfilingRule.metrics">
+<span class="sig-name descname"><span class="pre">metrics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.metadata.ProfilingRule.metrics" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.metadata.</span></span><span class="sig-name descname"><span class="pre">ValidationConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">whylabs_dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationRule" title="whylogs_container.whylabs.llm_validation.metadata.ValidationRule"><span class="pre">whylogs_container.whylabs.llm_validation.metadata.ValidationRule</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.metadata.</span></span><span class="sig-name descname"><span class="pre">ValidationConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">whylabs_dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationRule" title="whylogs_container.whylabs.llm_validation.metadata.ValidationRule"><span class="pre">whylogs_container.whylabs.llm_validation.metadata.ValidationRule</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profiling</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ProfilingRule" title="whylogs_container.whylabs.llm_validation.metadata.ProfilingRule"><span class="pre">whylogs_container.whylabs.llm_validation.metadata.ProfilingRule</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.id">
@@ -260,6 +326,11 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.policy_version">
 <span class="sig-name descname"><span class="pre">policy_version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.policy_version" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.profiling">
+<span class="sig-name descname"><span class="pre">profiling</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ProfilingRule" title="whylogs_container.whylabs.llm_validation.metadata.ProfilingRule"><span class="pre">ProfilingRule</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.profiling" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -360,6 +431,11 @@
 <section id="module-whylogs_container.whylabs.llm_validation.schema_builder">
 <span id="whylogs-container-whylabs-llm-validation-schema-builder-module"></span><h2>whylogs_container.whylabs.llm_validation.schema_builder module<a class="headerlink" href="#module-whylogs_container.whylabs.llm_validation.schema_builder" title="Permalink to this heading">#</a></h2>
 <dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.schema_builder.get_profiling_schema">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.schema_builder.</span></span><span class="sig-name descname"><span class="pre">get_profiling_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validation_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig" title="whylogs_container.whylabs.llm_validation.metadata.ValidationConfig"><span class="pre">ValidationConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DatasetSchema</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.schema_builder.get_profiling_schema" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.schema_builder.get_validators_udf_schema">
 <span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.schema_builder.</span></span><span class="sig-name descname"><span class="pre">get_validators_udf_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity_column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'prompt_id'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UdfSchema</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.schema_builder.get_validators_udf_schema" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -427,11 +503,6 @@
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.validators.</span></span><span class="sig-name descname"><span class="pre">BaseThresholdValidatorBuilder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">validation_rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationRule" title="whylogs_container.whylabs.llm_validation.metadata.ValidationRule"><span class="pre">ValidationRule</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#whylogs_container.whylabs.llm_validation.validators.ValidatorBuilder" title="whylogs_container.whylabs.llm_validation.validators.ValidatorBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValidatorBuilder</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder.build_threshold_validator">
-<span class="sig-name descname"><span class="pre">build_threshold_validator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder.build_threshold_validator" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder.build_validator">
 <span class="sig-name descname"><span class="pre">build_validator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder.build_validator" title="Permalink to this definition">#</a></dt>
@@ -567,11 +638,16 @@
 <li><a class="reference internal" href="#">whylogs_container.whylabs.llm_validation package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.llm_validation.config">whylogs_container.whylabs.llm_validation.config module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config.build_actions"><code class="docutils literal notranslate"><span class="pre">build_actions()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config.build_langkit_validator"><code class="docutils literal notranslate"><span class="pre">build_langkit_validator()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config.build_langkit_validators_dictionary"><code class="docutils literal notranslate"><span class="pre">build_langkit_validators_dictionary()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config.parse_yaml_to_dict"><code class="docutils literal notranslate"><span class="pre">parse_yaml_to_dict()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config.validate_yaml"><code class="docutils literal notranslate"><span class="pre">validate_yaml()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.llm_validation.config_parsing">whylogs_container.whylabs.llm_validation.config_parsing module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config_parsing.load_llm_profiling_options"><code class="docutils literal notranslate"><span class="pre">load_llm_profiling_options()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config_parsing.load_llm_validation_config_options"><code class="docutils literal notranslate"><span class="pre">load_llm_validation_config_options()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.config_parsing.load_yaml_data"><code class="docutils literal notranslate"><span class="pre">load_yaml_data()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.llm_validation.metadata">whylogs_container.whylabs.llm_validation.metadata module</a><ul>
@@ -581,10 +657,15 @@
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ConfigurationMetadata.timestamp"><code class="docutils literal notranslate"><span class="pre">ConfigurationMetadata.timestamp</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ProfilingRule"><code class="docutils literal notranslate"><span class="pre">ProfilingRule</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ProfilingRule.metrics"><code class="docutils literal notranslate"><span class="pre">ProfilingRule.metrics</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig"><code class="docutils literal notranslate"><span class="pre">ValidationConfig</span></code></a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.id"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.id</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.policy"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.policy</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.policy_version"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.policy_version</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.profiling"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.profiling</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.rules"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.rules</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.schema_version"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.schema_version</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.metadata.ValidationConfig.whylabs_dataset_id"><code class="docutils literal notranslate"><span class="pre">ValidationConfig.whylabs_dataset_id</span></code></a></li>
@@ -612,6 +693,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.llm_validation.schema_builder">whylogs_container.whylabs.llm_validation.schema_builder module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.schema_builder.get_profiling_schema"><code class="docutils literal notranslate"><span class="pre">get_profiling_schema()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.schema_builder.get_validators_udf_schema"><code class="docutils literal notranslate"><span class="pre">get_validators_udf_schema()</span></code></a></li>
 </ul>
 </li>
@@ -637,7 +719,6 @@
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.llm_validation.validators">whylogs_container.whylabs.llm_validation.validators module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder"><code class="docutils literal notranslate"><span class="pre">BaseThresholdValidatorBuilder</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder.build_threshold_validator"><code class="docutils literal notranslate"><span class="pre">BaseThresholdValidatorBuilder.build_threshold_validator()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.validators.BaseThresholdValidatorBuilder.build_validator"><code class="docutils literal notranslate"><span class="pre">BaseThresholdValidatorBuilder.build_validator()</span></code></a></li>
 </ul>
 </li>

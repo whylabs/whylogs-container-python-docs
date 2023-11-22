@@ -12,6 +12,14 @@ whylogs\_container.whylabs.llm\_validation.config module
    :undoc-members:
    :show-inheritance:
 
+whylogs\_container.whylabs.llm\_validation.config\_parsing module
+-----------------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.llm_validation.config_parsing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.whylabs.llm\_validation.metadata module
 ----------------------------------------------------------
 
