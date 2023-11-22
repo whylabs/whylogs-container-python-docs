@@ -192,473 +192,145 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 </section>
-<section id="module-whylogs_container.whylabs.actor.actor">
-<span id="whylogs-container-whylabs-actor-actor-module"></span><h2>whylogs_container.whylabs.actor.actor module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.actor" title="Permalink to this heading">#</a></h2>
+<section id="module-whylogs_container.whylabs.actor.logger">
+<span id="whylogs-container-whylabs-actor-logger-module"></span><h2>whylogs_container.whylabs.actor.logger module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.logger" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.Actor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.actor.</span></span><span class="sig-name descname"><span class="pre">Actor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_messages_to_process</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.Actor" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageType</span></code>]</p>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.ContainerLoggerFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.logger.</span></span><span class="sig-name descname"><span class="pre">ContainerLoggerFactory</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.ContainerLoggerFactory" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ThreadLoggerFactory</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.Actor.process_batch">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">MessageType</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.Actor.process_batch" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.Actor.process_messages">
-<span class="sig-name descname"><span class="pre">process_messages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.Actor.process_messages" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.Actor.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.Actor.run" title="Permalink to this definition">#</a></dt>
-<dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.Actor.send">
-<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.CloseMessage" title="whylogs_container.whylabs.actor.actor.CloseMessage"><span class="pre">CloseMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">MessageType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.Actor.send" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.Actor.shutdown">
-<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.Actor.shutdown" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.ContainerLoggerFactory.create_logger">
+<span class="sig-name descname"><span class="pre">create_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">LoggerOptions</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ThreadRollingLogger</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.ContainerLoggerFactory.create_logger" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.CloseMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.actor.</span></span><span class="sig-name descname"><span class="pre">CloseMessage</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.CloseMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.actor.start_actor">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.actor.</span></span><span class="sig-name descname"><span class="pre">start_actor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor" title="whylogs_container.whylabs.actor.actor.Actor"><span class="pre">Actor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.actor.start_actor" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</section>
-<section id="module-whylogs_container.whylabs.actor.profile_actor">
-<span id="whylogs-container-whylabs-actor-profile-actor-module"></span><h2>whylogs_container.whylabs.actor.profile_actor module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.profile_actor" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor.</span></span><span class="sig-name descname"><span class="pre">ProfileActor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">queue:</span> <span class="pre">~faster_fifo.Queue,</span> <span class="pre">env_vars:</span> <span class="pre">~whylogs_container.whylabs.container.config.ContainerConfig</span> <span class="pre">=</span> <span class="pre">&lt;whylogs_container.whylabs.container.config.ContainerConfig</span> <span class="pre">object&gt;,</span> <span class="pre">writers:</span> <span class="pre">~typing.List[~whylogs.api.writer.writer.Writer]</span> <span class="pre">=</span> <span class="pre">[],</span> <span class="pre">dataset_options_fn:</span> <span class="pre">~typing.Callable[[str],</span> <span class="pre">~whylabs_toolkit.container.config_types.DatasetOptions</span> <span class="pre">|</span> <span class="pre">None]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">max_messages_to_process:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">50000</span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor" title="whylogs_container.whylabs.actor.actor.Actor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Actor</span></code></a>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">DebugMessage</span></code></a>, <a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">PublishMessage</span></code></a>, <a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawLogMessage</span></code></a>, <a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawLogEmbeddingsMessage</span></code></a>, <a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawPubSubMessage</span></code></a>, <a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawPubSubEmbeddingMessage</span></code></a>, <a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenAIMessage</span></code></a>]]</p>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.logger.</span></span><span class="sig-name descname"><span class="pre">ContainerProcessRollingLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_by:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.time_util.TimeGranularity</span> <span class="pre">=</span> <span class="pre">TimeGranularity.Day</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_schedule:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.time_util.Schedule</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">Schedule(cadence=&lt;TimeGranularity.Minute:</span> <span class="pre">'Minute'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval=5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema:</span> <span class="pre">~whylogs.core.schema.DatasetSchema</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sync_enabled:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_time_fn:</span> <span class="pre">~typing.Callable[[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_config:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.actor.QueueConfig</span> <span class="pre">=</span> <span class="pre">QueueConfig(max_batch_size=50000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_accumualtion_duration=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_poll_wait=0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_buffer_bytes=100000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_queue_config:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.actor.QueueConfig</span> <span class="pre">=</span> <span class="pre">QueueConfig(max_batch_size=50000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_accumualtion_duration=1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_poll_wait=0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_buffer_bytes=100000000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer_factory:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.process_rolling_logger.WriterFactory</span> <span class="pre">=</span> <span class="pre">&lt;whylogs.api.logger.experimental.logger.actor.process_rolling_logger.WhyLabsWriterFactory</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_type:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.process_actor.QueueType</span> <span class="pre">=</span> <span class="pre">QueueType.FASTER_FIFO</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger_factory:</span> <span class="pre">~whylogs.api.logger.experimental.logger.actor.process_rolling_logger.LoggerFactory</span> <span class="pre">=</span> <span class="pre">&lt;whylogs.api.logger.experimental.logger.actor.process_rolling_logger.ThreadLoggerFactory</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProcessRollingLogger</span></code>[<a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage" title="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenAIMessage</span></code></a>]</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_batch">
-<span class="sig-name descname"><span class="pre">process_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage"><span class="pre">DebugMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage"><span class="pre">PublishMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage"><span class="pre">RawLogMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage"><span class="pre">RawLogEmbeddingsMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage"><span class="pre">RawPubSubMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage"><span class="pre">RawPubSubEmbeddingMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage"><span class="pre">OpenAIMessage</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_batch" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.process_batch">
+<span class="sig-name descname"><span class="pre">process_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage" title="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage"><span class="pre">OpenAIMessage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">FlushMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">RawLogMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">RawLogEmbeddingsMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">RawPubSubMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">RawPubSubEmbeddingMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">LogMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">CloseMessage</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">ProcessLoggerStatusMessage</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.process_batch" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_close_message">
-<span class="sig-name descname"><span class="pre">process_close_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.CloseMessage" title="whylogs_container.whylabs.actor.actor.CloseMessage"><span class="pre">CloseMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_close_message" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.process_openai_message">
+<span class="sig-name descname"><span class="pre">process_openai_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage" title="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage"><span class="pre">OpenAIMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.process_openai_message" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_debug_message">
-<span class="sig-name descname"><span class="pre">process_debug_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage"><span class="pre">DebugMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_debug_message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_dicts">
-<span class="sig-name descname"><span class="pre">process_log_dicts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_dicts" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_embeddings_dicts">
-<span class="sig-name descname"><span class="pre">process_log_embeddings_dicts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_embeddings_dicts" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_embeddings_messages">
-<span class="sig-name descname"><span class="pre">process_log_embeddings_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage"><span class="pre">RawLogEmbeddingsMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_embeddings_messages" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_openai_message">
-<span class="sig-name descname"><span class="pre">process_openai_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage"><span class="pre">OpenAIMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_openai_message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_publish_message">
-<span class="sig-name descname"><span class="pre">process_publish_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage"><span class="pre">PublishMessage</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_publish_message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub">
-<span class="sig-name descname"><span class="pre">process_pubsub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage"><span class="pre">RawPubSubMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub_embedding">
-<span class="sig-name descname"><span class="pre">process_pubsub_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage"><span class="pre">RawPubSubEmbeddingMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub_embedding" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_raw_log_dicts">
-<span class="sig-name descname"><span class="pre">process_raw_log_dicts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">messages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage"><span class="pre">RawLogMessage</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_raw_log_dicts" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor.ProfileActor.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.run" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.run" title="Permalink to this definition">#</a></dt>
 <dd><p>Method to be run in sub-process; can be overridden in sub-class</p>
 </dd></dl>
 
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.convert_dataset_cadence">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.logger.</span></span><span class="sig-name descname"><span class="pre">convert_dataset_cadence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetCadence</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TimeGranularity</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.convert_dataset_cadence" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.convert_schedule">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.logger.</span></span><span class="sig-name descname"><span class="pre">convert_schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upload_cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetUploadCadenceGranularity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upload_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Schedule</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.convert_schedule" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.logger.create_logger">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.logger.</span></span><span class="sig-name descname"><span class="pre">create_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.config.ContainerConfig" title="whylogs_container.whylabs.container.config.ContainerConfig"><span class="pre">ContainerConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger" title="whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger"><span class="pre">ContainerProcessRollingLogger</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.logger.create_logger" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-whylogs_container.whylabs.actor.profile_actor_messages">
-<span id="whylogs-container-whylabs-actor-profile-actor-messages-module"></span><h2>whylogs_container.whylabs.actor.profile_actor_messages module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.profile_actor_messages" title="Permalink to this heading">#</a></h2>
-<p>Messages that the ProfileActor can process.</p>
-<p>These types are core types that you can send to the ProfileActor. They are either subclasses of
-TypedDict or wrappers around serialized byte versions of those dicts. Everything in here is a
-TypedDict because we use orjson to deserialize them for performance reasons and that library prefers
-to output everything as dictionaries.</p>
-<p>The dataclass containers for those messages have helper methods to extract/deserialize the dicts. It’s
-important to not raise exceptions in those data classes because the actor does a lot of large batch processing
-and exceptions would result in losing the entire batch. Instead, they return None and log errors if there is
-some issue deserializing or validating.</p>
+<section id="module-whylogs_container.whylabs.actor.openai_messages">
+<span id="whylogs-container-whylabs-actor-openai-messages-module"></span><h2>whylogs_container.whylabs.actor.openai_messages module<a class="headerlink" href="#module-whylogs_container.whylabs.actor.openai_messages" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.DataDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">DataDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.DataDict.columns">
-<span class="sig-name descname"><span class="pre">columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict.columns" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.DataDict.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict.data" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">DebugMessage</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">LogEmbeddingRequestDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.datasetId">
-<span class="sig-name descname"><span class="pre">datasetId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.datasetId" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.embeddings">
-<span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.embeddings" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.timestamp">
-<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.timestamp" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">LogRequestDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.datasetId">
-<span class="sig-name descname"><span class="pre">datasetId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.datasetId" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.multiple">
-<span class="sig-name descname"><span class="pre">multiple</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict" title="whylogs_container.whylabs.actor.profile_actor_messages.DataDict"><span class="pre">DataDict</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.multiple" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.timestamp">
-<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.timestamp" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">OpenAIMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.openai_messages.</span></span><span class="sig-name descname"><span class="pre">OpenAIMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.dataset_id">
-<span class="sig-name descname"><span class="pre">dataset_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.dataset_id" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.dataset_id">
+<span class="sig-name descname"><span class="pre">dataset_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.dataset_id" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.get_user_prompt">
-<span class="sig-name descname"><span class="pre">get_user_prompt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.get_user_prompt" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.get_user_prompt">
+<span class="sig-name descname"><span class="pre">get_user_prompt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.get_user_prompt" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.prompt_id">
-<span class="sig-name descname"><span class="pre">prompt_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.prompt_id" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.prompt_id">
+<span class="sig-name descname"><span class="pre">prompt_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.prompt_id" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.request">
-<span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.request" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.request">
+<span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.request" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.request_time">
-<span class="sig-name descname"><span class="pre">request_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.request_time" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.request_time">
+<span class="sig-name descname"><span class="pre">request_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.request_time" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.response">
-<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.response" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.response" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.to_log_request_dict">
-<span class="sig-name descname"><span class="pre">to_log_request_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.to_log_request_dict" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.to_log_request_dict">
+<span class="sig-name descname"><span class="pre">to_log_request_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">LogRequestDict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.to_log_request_dict" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.to_openai_dict">
-<span class="sig-name descname"><span class="pre">to_openai_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict"><span class="pre">OpenAIRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.to_openai_dict" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.to_openai_dict">
+<span class="sig-name descname"><span class="pre">to_openai_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict" title="whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict"><span class="pre">OpenAIRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.to_openai_dict" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">OpenAIPromptDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.openai_messages.</span></span><span class="sig-name descname"><span class="pre">OpenAIPromptDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict.content">
-<span class="sig-name descname"><span class="pre">content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict.content" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict.content">
+<span class="sig-name descname"><span class="pre">content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict.content" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict.role">
-<span class="sig-name descname"><span class="pre">role</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict.role" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict.role">
+<span class="sig-name descname"><span class="pre">role</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict.role" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">OpenAIRequestDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.openai_messages.</span></span><span class="sig-name descname"><span class="pre">OpenAIRequestDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.messages">
-<span class="sig-name descname"><span class="pre">messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict" title="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict"><span class="pre">OpenAIPromptDict</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.messages" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.messages">
+<span class="sig-name descname"><span class="pre">messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict" title="whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict"><span class="pre">OpenAIPromptDict</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.messages" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.model">
-<span class="sig-name descname"><span class="pre">model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.model" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.model">
+<span class="sig-name descname"><span class="pre">model</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.model" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.temperature">
-<span class="sig-name descname"><span class="pre">temperature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.temperature" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.temperature">
+<span class="sig-name descname"><span class="pre">temperature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.temperature" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.whylabs_dataset_id">
-<span class="sig-name descname"><span class="pre">whylabs_dataset_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.whylabs_dataset_id" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.whylabs_dataset_id">
+<span class="sig-name descname"><span class="pre">whylabs_dataset_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.whylabs_dataset_id" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">PubSubDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.log_request">
-<span class="sig-name descname"><span class="pre">log_request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.log_request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage"><span class="pre">PubSubMessage</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.subscription">
-<span class="sig-name descname"><span class="pre">subscription</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.subscription" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">PubSubEmbeddingDict</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.log_embedding_request">
-<span class="sig-name descname"><span class="pre">log_embedding_request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.log_embedding_request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.message">
-<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage" title="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage"><span class="pre">PubSubMessage</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.subscription">
-<span class="sig-name descname"><span class="pre">subscription</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.subscription" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">PubSubMessage</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.attributes">
-<span class="sig-name descname"><span class="pre">attributes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.attributes" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.data" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.message_id">
-<span class="sig-name descname"><span class="pre">message_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.message_id" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.publish_time">
-<span class="sig-name descname"><span class="pre">publish_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.publish_time" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">PublishMessage</span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">RawLogEmbeddingsMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.request">
-<span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.request_time">
-<span class="sig-name descname"><span class="pre">request_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.request_time" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.to_log_embeddings_request_dict">
-<span class="sig-name descname"><span class="pre">to_log_embeddings_request_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.to_log_embeddings_request_dict" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">RawLogMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.request">
-<span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.request_time">
-<span class="sig-name descname"><span class="pre">request_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.request_time" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.to_log_request_dict">
-<span class="sig-name descname"><span class="pre">to_log_request_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.to_log_request_dict" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">RawPubSubEmbeddingMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.request">
-<span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.request_time">
-<span class="sig-name descname"><span class="pre">request_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.request_time" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.to_pubsub_embedding_message">
-<span class="sig-name descname"><span class="pre">to_pubsub_embedding_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict" title="whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict"><span class="pre">PubSubEmbeddingDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.to_pubsub_embedding_message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">RawPubSubMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.request">
-<span class="sig-name descname"><span class="pre">request</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.request_time">
-<span class="sig-name descname"><span class="pre">request_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.request_time" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.to_pubsub_message">
-<span class="sig-name descname"><span class="pre">to_pubsub_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict" title="whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict"><span class="pre">PubSubDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.to_pubsub_message" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.determine_dataset_timestamp">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">determine_dataset_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetCadence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.determine_dataset_timestamp" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.get_columns">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">get_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.get_columns" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.log_dict_to_data_frame">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">log_dict_to_data_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">DataFrame</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.log_dict_to_data_frame" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.log_dict_to_embedding_matrix">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">log_dict_to_embedding_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.log_dict_to_embedding_matrix" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.reduce_embeddings_request">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">reduce_embeddings_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cur</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><span class="pre">LogEmbeddingRequestDict</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.reduce_embeddings_request" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.actor.profile_actor_messages.reduce_log_requests">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.actor.profile_actor_messages.</span></span><span class="sig-name descname"><span class="pre">reduce_log_requests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cur</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict" title="whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><span class="pre">LogRequestDict</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.actor.profile_actor_messages.reduce_log_requests" title="Permalink to this definition">#</a></dt>
-<dd><p>Reduce requests, assuming that each request has the same columns.
-That assumption should be enforced before this is used by grouping by set of columns.</p>
 </dd></dl>
 
 </section>
@@ -706,129 +378,46 @@ That assumption should be enforced before this is used by grouping by set of col
             <ul>
 <li><a class="reference internal" href="#">whylogs_container.whylabs.actor package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.actor">whylogs_container.whylabs.actor.actor module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor"><code class="docutils literal notranslate"><span class="pre">Actor</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor.process_batch"><code class="docutils literal notranslate"><span class="pre">Actor.process_batch()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor.process_messages"><code class="docutils literal notranslate"><span class="pre">Actor.process_messages()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor.run"><code class="docutils literal notranslate"><span class="pre">Actor.run()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor.send"><code class="docutils literal notranslate"><span class="pre">Actor.send()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.Actor.shutdown"><code class="docutils literal notranslate"><span class="pre">Actor.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.logger">whylogs_container.whylabs.actor.logger module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerLoggerFactory"><code class="docutils literal notranslate"><span class="pre">ContainerLoggerFactory</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerLoggerFactory.create_logger"><code class="docutils literal notranslate"><span class="pre">ContainerLoggerFactory.create_logger()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.CloseMessage"><code class="docutils literal notranslate"><span class="pre">CloseMessage</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.actor.start_actor"><code class="docutils literal notranslate"><span class="pre">start_actor()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.process_batch"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.process_batch()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.process_openai_message"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.process_openai_message()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger.run"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.run()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.profile_actor">whylogs_container.whylabs.actor.profile_actor module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor"><code class="docutils literal notranslate"><span class="pre">ProfileActor</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_batch"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_batch()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_close_message"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_close_message()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_debug_message"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_debug_message()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_dicts"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_log_dicts()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_embeddings_dicts"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_log_embeddings_dicts()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_log_embeddings_messages"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_log_embeddings_messages()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_openai_message"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_openai_message()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_publish_message"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_publish_message()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_pubsub()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_pubsub_embedding"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_pubsub_embedding()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.process_raw_log_dicts"><code class="docutils literal notranslate"><span class="pre">ProfileActor.process_raw_log_dicts()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor.ProfileActor.run"><code class="docutils literal notranslate"><span class="pre">ProfileActor.run()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.convert_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">convert_dataset_cadence()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.convert_schedule"><code class="docutils literal notranslate"><span class="pre">convert_schedule()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.logger.create_logger"><code class="docutils literal notranslate"><span class="pre">create_logger()</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.openai_messages">whylogs_container.whylabs.actor.openai_messages module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.dataset_id"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.dataset_id</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.get_user_prompt"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.get_user_prompt()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.prompt_id"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.prompt_id</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.request"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.request</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.request_time"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.request_time</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.response"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.response</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.to_log_request_dict"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.to_log_request_dict()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIMessage.to_openai_dict"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.to_openai_dict()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-whylogs_container.whylabs.actor.profile_actor_messages">whylogs_container.whylabs.actor.profile_actor_messages module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict"><code class="docutils literal notranslate"><span class="pre">DataDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict.columns"><code class="docutils literal notranslate"><span class="pre">DataDict.columns</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DataDict.data"><code class="docutils literal notranslate"><span class="pre">DataDict.data</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict"><code class="docutils literal notranslate"><span class="pre">OpenAIPromptDict</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict.content"><code class="docutils literal notranslate"><span class="pre">OpenAIPromptDict.content</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIPromptDict.role"><code class="docutils literal notranslate"><span class="pre">OpenAIPromptDict.role</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.DebugMessage"><code class="docutils literal notranslate"><span class="pre">DebugMessage</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequestDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.datasetId"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequestDict.datasetId</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.embeddings"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequestDict.embeddings</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogEmbeddingRequestDict.timestamp"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequestDict.timestamp</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.messages"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.messages</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.model"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.model</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.temperature"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.temperature</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.actor.openai_messages.OpenAIRequestDict.whylabs_dataset_id"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.whylabs_dataset_id</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict"><code class="docutils literal notranslate"><span class="pre">LogRequestDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.datasetId"><code class="docutils literal notranslate"><span class="pre">LogRequestDict.datasetId</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.multiple"><code class="docutils literal notranslate"><span class="pre">LogRequestDict.multiple</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.LogRequestDict.timestamp"><code class="docutils literal notranslate"><span class="pre">LogRequestDict.timestamp</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.dataset_id"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.dataset_id</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.get_user_prompt"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.get_user_prompt()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.prompt_id"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.prompt_id</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.request"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.request_time"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.request_time</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.response"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.response</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.to_log_request_dict"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.to_log_request_dict()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIMessage.to_openai_dict"><code class="docutils literal notranslate"><span class="pre">OpenAIMessage.to_openai_dict()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict"><code class="docutils literal notranslate"><span class="pre">OpenAIPromptDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict.content"><code class="docutils literal notranslate"><span class="pre">OpenAIPromptDict.content</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIPromptDict.role"><code class="docutils literal notranslate"><span class="pre">OpenAIPromptDict.role</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.messages"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.messages</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.model"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.model</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.temperature"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.temperature</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.OpenAIRequestDict.whylabs_dataset_id"><code class="docutils literal notranslate"><span class="pre">OpenAIRequestDict.whylabs_dataset_id</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict"><code class="docutils literal notranslate"><span class="pre">PubSubDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.log_request"><code class="docutils literal notranslate"><span class="pre">PubSubDict.log_request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.message"><code class="docutils literal notranslate"><span class="pre">PubSubDict.message</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubDict.subscription"><code class="docutils literal notranslate"><span class="pre">PubSubDict.subscription</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict"><code class="docutils literal notranslate"><span class="pre">PubSubEmbeddingDict</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.log_embedding_request"><code class="docutils literal notranslate"><span class="pre">PubSubEmbeddingDict.log_embedding_request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.message"><code class="docutils literal notranslate"><span class="pre">PubSubEmbeddingDict.message</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubEmbeddingDict.subscription"><code class="docutils literal notranslate"><span class="pre">PubSubEmbeddingDict.subscription</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage"><code class="docutils literal notranslate"><span class="pre">PubSubMessage</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.attributes"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.attributes</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.data"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.data</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.message_id"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.message_id</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PubSubMessage.publish_time"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.publish_time</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.PublishMessage"><code class="docutils literal notranslate"><span class="pre">PublishMessage</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage"><code class="docutils literal notranslate"><span class="pre">RawLogEmbeddingsMessage</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.request"><code class="docutils literal notranslate"><span class="pre">RawLogEmbeddingsMessage.request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.request_time"><code class="docutils literal notranslate"><span class="pre">RawLogEmbeddingsMessage.request_time</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogEmbeddingsMessage.to_log_embeddings_request_dict"><code class="docutils literal notranslate"><span class="pre">RawLogEmbeddingsMessage.to_log_embeddings_request_dict()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage"><code class="docutils literal notranslate"><span class="pre">RawLogMessage</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.request"><code class="docutils literal notranslate"><span class="pre">RawLogMessage.request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.request_time"><code class="docutils literal notranslate"><span class="pre">RawLogMessage.request_time</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawLogMessage.to_log_request_dict"><code class="docutils literal notranslate"><span class="pre">RawLogMessage.to_log_request_dict()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage"><code class="docutils literal notranslate"><span class="pre">RawPubSubEmbeddingMessage</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.request"><code class="docutils literal notranslate"><span class="pre">RawPubSubEmbeddingMessage.request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.request_time"><code class="docutils literal notranslate"><span class="pre">RawPubSubEmbeddingMessage.request_time</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubEmbeddingMessage.to_pubsub_embedding_message"><code class="docutils literal notranslate"><span class="pre">RawPubSubEmbeddingMessage.to_pubsub_embedding_message()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage"><code class="docutils literal notranslate"><span class="pre">RawPubSubMessage</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.request"><code class="docutils literal notranslate"><span class="pre">RawPubSubMessage.request</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.request_time"><code class="docutils literal notranslate"><span class="pre">RawPubSubMessage.request_time</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.RawPubSubMessage.to_pubsub_message"><code class="docutils literal notranslate"><span class="pre">RawPubSubMessage.to_pubsub_message()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.determine_dataset_timestamp"><code class="docutils literal notranslate"><span class="pre">determine_dataset_timestamp()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.get_columns"><code class="docutils literal notranslate"><span class="pre">get_columns()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.log_dict_to_data_frame"><code class="docutils literal notranslate"><span class="pre">log_dict_to_data_frame()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.log_dict_to_embedding_matrix"><code class="docutils literal notranslate"><span class="pre">log_dict_to_embedding_matrix()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.reduce_embeddings_request"><code class="docutils literal notranslate"><span class="pre">reduce_embeddings_request()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.actor.profile_actor_messages.reduce_log_requests"><code class="docutils literal notranslate"><span class="pre">reduce_log_requests()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.actor">Module contents</a></li>

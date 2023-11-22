@@ -4,26 +4,18 @@ whylogs\_container.whylabs.actor package
 Submodules
 ----------
 
-whylogs\_container.whylabs.actor.actor module
----------------------------------------------
+whylogs\_container.whylabs.actor.logger module
+----------------------------------------------
 
-.. automodule:: whylogs_container.whylabs.actor.actor
+.. automodule:: whylogs_container.whylabs.actor.logger
    :members:
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.actor.profile\_actor module
-------------------------------------------------------
+whylogs\_container.whylabs.actor.openai\_messages module
+--------------------------------------------------------
 
-.. automodule:: whylogs_container.whylabs.actor.profile_actor
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-whylogs\_container.whylabs.actor.profile\_actor\_messages module
-----------------------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.actor.profile_actor_messages
+.. automodule:: whylogs_container.whylabs.actor.openai_messages
    :members:
    :undoc-members:
    :show-inheritance:

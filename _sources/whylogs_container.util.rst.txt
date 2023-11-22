@@ -44,22 +44,6 @@ whylogs\_container.util.string\_util\_test module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.util.time module
------------------------------------
-
-.. automodule:: whylogs_container.util.time
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-whylogs\_container.util.time\_test module
------------------------------------------
-
-.. automodule:: whylogs_container.util.time_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 Module contents
 ---------------
 
