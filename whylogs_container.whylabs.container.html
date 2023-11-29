@@ -248,6 +248,46 @@
 <dd></dd></dl>
 
 </section>
+<section id="module-whylogs_container.whylabs.container.container_config">
+<span id="whylogs-container-whylabs-container-container-config-module"></span><h2>whylogs_container.whylabs.container.container_config module<a class="headerlink" href="#module-whylogs_container.whylabs.container.container_config" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.ContainerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.container_config.</span></span><span class="sig-name descname"><span class="pre">ContainerConfig</span></span><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.ContainerConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.ContainerConfig.get_dataset_options">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_dataset_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">DatasetOptions</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.ContainerConfig.get_dataset_options" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.ContainerConfig.get_udfs">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_udfs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.UDFConfig" title="whylogs_container.whylabs.container.container_config.UDFConfig"><span class="pre">UDFConfig</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.ContainerConfig.get_udfs" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.UDFConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.container_config.</span></span><span class="sig-name descname"><span class="pre">UDFConfig</span></span><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.UDFConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.UDFConfig.applicable_columns">
+<span class="sig-name descname"><span class="pre">applicable_columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.UDFConfig.applicable_columns" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.UDFConfig.metrics">
+<span class="sig-name descname"><span class="pre">metrics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">MetricSpec</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.UDFConfig.metrics" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.container_config.UDFConfig.udf">
+<span class="sig-name descname"><span class="pre">udf</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.container_config.UDFConfig.udf" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-whylogs_container.whylabs.container.environment">
 <span id="whylogs-container-whylabs-container-environment-module"></span><h2>whylogs_container.whylabs.container.environment module<a class="headerlink" href="#module-whylogs_container.whylabs.container.environment" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
@@ -800,6 +840,20 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.config_test">whylogs_container.whylabs.container.config_test module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit"><code class="docutils literal notranslate"><span class="pre">test_indexing_into_toolkit()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.container.container_config">whylogs_container.whylabs.container.container_config module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.ContainerConfig"><code class="docutils literal notranslate"><span class="pre">ContainerConfig</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.ContainerConfig.get_dataset_options"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.get_dataset_options()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.ContainerConfig.get_udfs"><code class="docutils literal notranslate"><span class="pre">ContainerConfig.get_udfs()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.UDFConfig"><code class="docutils literal notranslate"><span class="pre">UDFConfig</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.UDFConfig.applicable_columns"><code class="docutils literal notranslate"><span class="pre">UDFConfig.applicable_columns</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.UDFConfig.metrics"><code class="docutils literal notranslate"><span class="pre">UDFConfig.metrics</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.container_config.UDFConfig.udf"><code class="docutils literal notranslate"><span class="pre">UDFConfig.udf</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.environment">whylogs_container.whylabs.container.environment module</a><ul>

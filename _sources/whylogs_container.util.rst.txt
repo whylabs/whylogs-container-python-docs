@@ -4,22 +4,6 @@ whylogs\_container.util package
 Submodules
 ----------
 
-whylogs\_container.util.list\_util module
------------------------------------------
-
-.. automodule:: whylogs_container.util.list_util
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-whylogs\_container.util.list\_util\_test module
------------------------------------------------
-
-.. automodule:: whylogs_container.util.list_util_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 whylogs\_container.util.signal\_util module
 -------------------------------------------
 
