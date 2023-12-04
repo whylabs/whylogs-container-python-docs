@@ -692,6 +692,123 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
 </dd></dl>
 
 </section>
+<section id="module-whylogs_container.whylabs.container.responses">
+<span id="whylogs-container-whylabs-container-responses-module"></span><h2>whylogs_container.whylabs.container.responses module<a class="headerlink" href="#module-whylogs_container.whylabs.container.responses" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusProfiles">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.responses.</span></span><span class="sig-name descname"><span class="pre">LoggerStatusProfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">views</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">whylogs.core.view.dataset_profile_view.DatasetProfileView</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_views</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">whylogs.core.view.dataset_profile_view.DatasetProfileView</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusProfiles.pending_views">
+<span class="sig-name descname"><span class="pre">pending_views</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">DatasetProfileView</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles.pending_views" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusProfiles.views">
+<span class="sig-name descname"><span class="pre">views</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">DatasetProfileView</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles.views" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.responses.</span></span><span class="sig-name descname"><span class="pre">LoggerStatusResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_timestamps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_profiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">segment_caches</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_writables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_views</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.dataset_profiles">
+<span class="sig-name descname"><span class="pre">dataset_profiles</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.dataset_profiles" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.dataset_timestamps">
+<span class="sig-name descname"><span class="pre">dataset_timestamps</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.dataset_timestamps" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.model_config" title="Permalink to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'dataset_profiles':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True),</span> <span class="pre">'dataset_timestamps':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True),</span> <span class="pre">'pending_views':</span> <span class="pre">FieldInfo(annotation=List[str],</span> <span class="pre">required=True),</span> <span class="pre">'pending_writables':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True),</span> <span class="pre">'segment_caches':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True),</span> <span class="pre">'views':</span> <span class="pre">FieldInfo(annotation=List[str],</span> <span class="pre">required=True),</span> <span class="pre">'writers':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.model_fields" title="Permalink to this definition">#</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.pending_views">
+<span class="sig-name descname"><span class="pre">pending_views</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.pending_views" title="Permalink to this definition">#</a></dt>
+<dd><p>Pending views are ones that have already been staged for writing. This happens
+whenever the rolling logger hits the time interal for uploading its internal state.
+If these fail to upload then they’ll remain pending until the next attempt.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.pending_writables">
+<span class="sig-name descname"><span class="pre">pending_writables</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.pending_writables" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.segment_caches">
+<span class="sig-name descname"><span class="pre">segment_caches</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.segment_caches" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.views">
+<span class="sig-name descname"><span class="pre">views</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.views" title="Permalink to this definition">#</a></dt>
+<dd><p>Views are currently being added to with new log messages. There haven’t been any attempts
+to write these yet.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.LoggerStatusResponse.writers">
+<span class="sig-name descname"><span class="pre">writers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.writers" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.responses.</span></span><span class="sig-name descname"><span class="pre">ProcessLoggerStatusResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statuses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse" title="whylogs_container.whylabs.container.responses.LoggerStatusResponse"><span class="pre">LoggerStatusResponse</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.get_profile_list">
+<span class="sig-name descname"><span class="pre">get_profile_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">DatasetProfileView</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.get_profile_list" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns a single list of all dataset profile views.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.get_profiles">
+<span class="sig-name descname"><span class="pre">get_profiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles" title="whylogs_container.whylabs.container.responses.LoggerStatusProfiles"><span class="pre">LoggerStatusProfiles</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.get_profiles" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns a dictionary of dataset_id to a list of dataset profile views.
+This preserves the mapping of dataset id and the separation of pending views from views.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.model_config" title="Permalink to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'statuses':</span> <span class="pre">FieldInfo(annotation=Dict[str,</span> <span class="pre">LoggerStatusResponse],</span> <span class="pre">required=False,</span> <span class="pre">default={})}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.model_fields" title="Permalink to this definition">#</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.statuses">
+<span class="sig-name descname"><span class="pre">statuses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse" title="whylogs_container.whylabs.container.responses.LoggerStatusResponse"><span class="pre">LoggerStatusResponse</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.statuses" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-whylogs_container.whylabs.container.routes">
 <span id="whylogs-container-whylabs-container-routes-module"></span><h2>whylogs_container.whylabs.container.routes module<a class="headerlink" href="#module-whylogs_container.whylabs.container.routes" title="Permalink to this heading">#</a></h2>
 <dl class="py function">
@@ -841,6 +958,11 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.shutdown" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.status">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse" title="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse"><span class="pre">ProcessLoggerStatusResponse</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.status" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 </section>
 <section id="module-whylogs_container.whylabs.container.startup">
 <span id="whylogs-container-whylabs-container-startup-module"></span><h2>whylogs_container.whylabs.container.startup module<a class="headerlink" href="#module-whylogs_container.whylabs.container.startup" title="Permalink to this heading">#</a></h2>
@@ -852,6 +974,11 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.startup.init_logging">
 <span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">init_logging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.startup.init_logging" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.startup.start">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.startup.start" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -1025,6 +1152,34 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.container.responses">whylogs_container.whylabs.container.responses module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles"><code class="docutils literal notranslate"><span class="pre">LoggerStatusProfiles</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles.pending_views"><code class="docutils literal notranslate"><span class="pre">LoggerStatusProfiles.pending_views</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusProfiles.views"><code class="docutils literal notranslate"><span class="pre">LoggerStatusProfiles.views</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.dataset_profiles"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.dataset_profiles</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.dataset_timestamps"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.dataset_timestamps</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.model_config"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.model_fields"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.pending_views"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.pending_views</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.pending_writables"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.pending_writables</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.segment_caches"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.segment_caches</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.views"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.views</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.LoggerStatusResponse.writers"><code class="docutils literal notranslate"><span class="pre">LoggerStatusResponse.writers</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse"><code class="docutils literal notranslate"><span class="pre">ProcessLoggerStatusResponse</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.get_profile_list"><code class="docutils literal notranslate"><span class="pre">ProcessLoggerStatusResponse.get_profile_list()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.get_profiles"><code class="docutils literal notranslate"><span class="pre">ProcessLoggerStatusResponse.get_profiles()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.model_config"><code class="docutils literal notranslate"><span class="pre">ProcessLoggerStatusResponse.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.model_fields"><code class="docutils literal notranslate"><span class="pre">ProcessLoggerStatusResponse.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse.statuses"><code class="docutils literal notranslate"><span class="pre">ProcessLoggerStatusResponse.statuses</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.routes">whylogs_container.whylabs.container.routes module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.health"><code class="docutils literal notranslate"><span class="pre">health()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log"><code class="docutils literal notranslate"><span class="pre">log()</span></code></a></li>
@@ -1037,11 +1192,13 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.openai_proxy"><code class="docutils literal notranslate"><span class="pre">openai_proxy()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.publish_profiles"><code class="docutils literal notranslate"><span class="pre">publish_profiles()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.status"><code class="docutils literal notranslate"><span class="pre">status()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.startup">whylogs_container.whylabs.container.startup module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.startup.fix_torch_threading"><code class="docutils literal notranslate"><span class="pre">fix_torch_threading()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.startup.init_logging"><code class="docutils literal notranslate"><span class="pre">init_logging()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.startup.start"><code class="docutils literal notranslate"><span class="pre">start()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.startup.update_pid"><code class="docutils literal notranslate"><span class="pre">update_pid()</span></code></a></li>
 </ul>
 </li>

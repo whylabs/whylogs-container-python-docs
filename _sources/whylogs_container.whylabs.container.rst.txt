@@ -52,6 +52,14 @@ whylogs\_container.whylabs.container.requests module
    :undoc-members:
    :show-inheritance:
 
+whylogs\_container.whylabs.container.responses module
+-----------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.responses
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.whylabs.container.routes module
 --------------------------------------------------
 
