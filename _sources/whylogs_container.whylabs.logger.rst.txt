@@ -1,0 +1,29 @@
+whylogs\_container.whylabs.logger package
+=========================================
+
+Submodules
+----------
+
+whylogs\_container.whylabs.logger.logger module
+-----------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.logger.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+whylogs\_container.whylabs.logger.openai\_messages module
+---------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.logger.openai_messages
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: whylogs_container.whylabs.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:

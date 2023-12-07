@@ -437,7 +437,7 @@ whylogs.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER">
 <span class="sig-name descname"><span class="pre">LLM_CONTAINER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLM_CONTAINER'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER" title="Permalink to this definition">#</a></dt>
-<dd><p>Env var to identify if the deployment is of the type LLM or not. Defaults to False, but set to 
+<dd><p>Env var to identify if the deployment is of the type LLM or not. Defaults to False, but set to
 True on LLM image build</p>
 </dd></dl>
 
@@ -456,7 +456,7 @@ to our whylogs container doc page’s performance load testing numbers).</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES">
 <span class="sig-name descname"><span class="pre">MAX_REQUEST_BUFFER_BYTES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BUFFER_BYTES'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES" title="Permalink to this definition">#</a></dt>
-<dd><p>Defaults to 1_000_000_000 (1GB). The size of the buffer that requests are put onto after they come in from the REST server process. 
+<dd><p>Defaults to 1_000_000_000 (1GB). The size of the buffer that requests are put onto after they come in from the REST server process.
 Increasing this would give you more time to process requests before they start timing out. It could be a good idea
 to increase this number if you’re seeing request timeouts for spikey traffic patterns, or if you have more memory
 on the host and nothing better to do with it.</p>
@@ -876,7 +876,7 @@ response = requests.post(url, json=data, headers=headers)
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_embeddings">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_embeddings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_embeddings" title="Permalink to this definition">#</a></dt>
-<dd><p>This endpoint requires a custom configuration to set up before hand. See <a class="reference external" href="https://docs.whylabs.ai/docs/integrations-whylogs-container/">https://docs.whylabs.ai/docs/integrations-whylogs-container/</a> 
+<dd><p>This endpoint requires a custom configuration to set up before hand. See <a class="reference external" href="https://docs.whylabs.ai/docs/integrations-whylogs-container/">https://docs.whylabs.ai/docs/integrations-whylogs-container/</a>
 for setting up embeddings support.</p>
 <p>Log embeddings data. The Swagger UI isn’t able to call this currently.</p>
 <p>## Sample curl request:</p>
@@ -928,7 +928,7 @@ because it has a steep performance penalty compared to the normal /log-embedding
 
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.log_json">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest" title="whylogs_container.whylabs.container.requests.LogRequest"><span class="pre">LogRequest</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_json" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">log_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest" title="whylogs_container.whylabs.container.requests.LogRequest"><span class="pre">LogRequest</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.log_json" title="Permalink to this definition">#</a></dt>
 <dd><p>Use this endpoint for manually testing and experimenting. It shouldn’t be used in production
 because it has a steep performance penalty compared to the normal /log endpoint.</p>
 </dd></dl>
@@ -983,7 +983,7 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 
 <dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.startup.update_pid">
-<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">update_pid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="whylogs_container.whylabs.actor.html#whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger" title="whylogs_container.whylabs.actor.logger.ContainerProcessRollingLogger"><span class="pre">ContainerProcessRollingLogger</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.startup.update_pid" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">update_pid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger" title="whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger"><span class="pre">ContainerProcessRollingLogger</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.startup.update_pid" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </section>
