@@ -353,10 +353,10 @@
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.log_json"><code class="docutils literal notranslate"><span class="pre">log_json()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.log_pubsub"><code class="docutils literal notranslate"><span class="pre">log_pubsub()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.log_pubsub_embeddings"><code class="docutils literal notranslate"><span class="pre">log_pubsub_embeddings()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.openai_proxy"><code class="docutils literal notranslate"><span class="pre">openai_proxy()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.publish_profiles"><code class="docutils literal notranslate"><span class="pre">publish_profiles()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.status"><code class="docutils literal notranslate"><span class="pre">status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.container.html#whylogs_container.whylabs.container.routes.validate_llm"><code class="docutils literal notranslate"><span class="pre">validate_llm()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="whylogs_container.whylabs.container.html#module-whylogs_container.whylabs.container.startup">whylogs_container.whylabs.container.startup module</a><ul>
@@ -437,6 +437,10 @@
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationMetadata.value"><code class="docutils literal notranslate"><span class="pre">ValidationMetadata.value</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationReport"><code class="docutils literal notranslate"><span class="pre">ValidationReport</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationReport.failures"><code class="docutils literal notranslate"><span class="pre">ValidationReport.failures</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationRule"><code class="docutils literal notranslate"><span class="pre">ValidationRule</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationRule.config_path"><code class="docutils literal notranslate"><span class="pre">ValidationRule.config_path</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationRule.include_upper"><code class="docutils literal notranslate"><span class="pre">ValidationRule.include_upper</span></code></a></li>
@@ -469,33 +473,11 @@
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validation_utils.flag_failed_validation"><code class="docutils literal notranslate"><span class="pre">flag_failed_validation()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#module-whylogs_container.whylabs.llm_validation.validation_workflow">whylogs_container.whylabs.llm_validation.validation_workflow module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validation_workflow.RequestMetadata"><code class="docutils literal notranslate"><span class="pre">RequestMetadata</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validation_workflow.RequestMetadata.headers"><code class="docutils literal notranslate"><span class="pre">RequestMetadata.headers</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validation_workflow.make_openai_request"><code class="docutils literal notranslate"><span class="pre">make_openai_request()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validation_workflow.validation_workflow"><code class="docutils literal notranslate"><span class="pre">validation_workflow()</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#module-whylogs_container.whylabs.llm_validation.validator">whylogs_container.whylabs.llm_validation.validator module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.PromptValidationMessage"><code class="docutils literal notranslate"><span class="pre">PromptValidationMessage</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.PromptValidationMessage.id"><code class="docutils literal notranslate"><span class="pre">PromptValidationMessage.id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.PromptValidationMessage.openai_message"><code class="docutils literal notranslate"><span class="pre">PromptValidationMessage.openai_message</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.PromptValidationMessage.request_metadata"><code class="docutils literal notranslate"><span class="pre">PromptValidationMessage.request_metadata</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ResponseValidationMessage"><code class="docutils literal notranslate"><span class="pre">ResponseValidationMessage</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ResponseValidationMessage.id"><code class="docutils literal notranslate"><span class="pre">ResponseValidationMessage.id</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ResponseValidationMessage.openai_message"><code class="docutils literal notranslate"><span class="pre">ResponseValidationMessage.openai_message</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ResponseValidationMessage.response"><code class="docutils literal notranslate"><span class="pre">ResponseValidationMessage.response</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.SynchronousValidator"><code class="docutils literal notranslate"><span class="pre">SynchronousValidator</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.SynchronousValidator.close_validator"><code class="docutils literal notranslate"><span class="pre">SynchronousValidator.close_validator()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.SynchronousValidator.start_validator"><code class="docutils literal notranslate"><span class="pre">SynchronousValidator.start_validator()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.SynchronousValidator.validate_prompt"><code class="docutils literal notranslate"><span class="pre">SynchronousValidator.validate_prompt()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.SynchronousValidator.validate_response"><code class="docutils literal notranslate"><span class="pre">SynchronousValidator.validate_response()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor"><code class="docutils literal notranslate"><span class="pre">ValidationActor</span></code></a><ul>
@@ -503,11 +485,26 @@
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.close_validator"><code class="docutils literal notranslate"><span class="pre">ValidationActor.close_validator()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.process_batch"><code class="docutils literal notranslate"><span class="pre">ValidationActor.process_batch()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.process_close_message"><code class="docutils literal notranslate"><span class="pre">ValidationActor.process_close_message()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.process_prompt_validation_message"><code class="docutils literal notranslate"><span class="pre">ValidationActor.process_prompt_validation_message()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.process_response_validation_message"><code class="docutils literal notranslate"><span class="pre">ValidationActor.process_response_validation_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.process_validation_message"><code class="docutils literal notranslate"><span class="pre">ValidationActor.process_validation_message()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.run"><code class="docutils literal notranslate"><span class="pre">ValidationActor.run()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.start"><code class="docutils literal notranslate"><span class="pre">ValidationActor.start()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationActor.start_validator"><code class="docutils literal notranslate"><span class="pre">ValidationActor.start_validator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationMessage"><code class="docutils literal notranslate"><span class="pre">ValidationMessage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationMessage.id"><code class="docutils literal notranslate"><span class="pre">ValidationMessage.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationMessage.request"><code class="docutils literal notranslate"><span class="pre">ValidationMessage.request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationMessage.to_validation_request"><code class="docutils literal notranslate"><span class="pre">ValidationMessage.to_validation_request()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest"><code class="docutils literal notranslate"><span class="pre">ValidationRequest</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.dataset_id"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.dataset_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.model_config"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.model_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.model_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.prompt"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.prompt_id"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.prompt_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.response"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.response</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.ValidationRequest.to_row"><code class="docutils literal notranslate"><span class="pre">ValidationRequest.to_row()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.validator.create_validator"><code class="docutils literal notranslate"><span class="pre">create_validator()</span></code></a></li>
@@ -564,8 +561,15 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger.process_batch"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.process_batch()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger.process_openai_message"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.process_openai_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger.process_llm_log_message"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.process_llm_log_message()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.ContainerProcessRollingLogger.run"><code class="docutils literal notranslate"><span class="pre">ContainerProcessRollingLogger.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.RawLLMLogMessage"><code class="docutils literal notranslate"><span class="pre">RawLLMLogMessage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.RawLLMLogMessage.id"><code class="docutils literal notranslate"><span class="pre">RawLLMLogMessage.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.RawLLMLogMessage.request"><code class="docutils literal notranslate"><span class="pre">RawLLMLogMessage.request</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.RawLLMLogMessage.request_time"><code class="docutils literal notranslate"><span class="pre">RawLLMLogMessage.request_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.RawLLMLogMessage.to_log_request_dict"><code class="docutils literal notranslate"><span class="pre">RawLLMLogMessage.to_log_request_dict()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="whylogs_container.whylabs.logger.html#whylogs_container.whylabs.logger.logger.convert_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">convert_dataset_cadence()</span></code></a></li>

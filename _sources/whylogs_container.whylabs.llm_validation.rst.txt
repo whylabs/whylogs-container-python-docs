@@ -60,14 +60,6 @@ whylogs\_container.whylabs.llm\_validation.validation\_utils module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.llm\_validation.validation\_workflow module
-----------------------------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.llm_validation.validation_workflow
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 whylogs\_container.whylabs.llm\_validation.validator module
 -----------------------------------------------------------
 

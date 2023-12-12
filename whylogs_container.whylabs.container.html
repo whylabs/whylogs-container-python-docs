@@ -881,7 +881,7 @@ for setting up embeddings support.</p>
 <p>Log embeddings data. The Swagger UI isn’t able to call this currently.</p>
 <p>## Sample curl request:</p>
 <p><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a>bash
-curl -X ‘POST’     -H “X-API-Key: &lt;password&gt;”     -H “Content-Type: application/json”     ‘<a class="reference external" href="http://localhost:8000/log-embeddings">http://localhost:8000/log-embeddings</a>’     –data-raw ‘{</p>
+curl -X ‘POST’     -H “X-API-Key: &lt;password&gt;”     -H “Content-Type: application/octet-stream”     ‘<a class="reference external" href="http://localhost:8000/log-embeddings">http://localhost:8000/log-embeddings</a>’     –data-raw ‘{</p>
 <blockquote>
 <div><p>“datasetId”: “model-62”,
 “timestamp”: 1634235000,
@@ -913,7 +913,7 @@ data = {</p>
 </div></blockquote>
 <p>}</p>
 <p># Make the POST request
-headers = {“X-API-Key”: api_key, “Content-Type”: “application/json”}
+headers = {“X-API-Key”: api_key, “Content-Type”: “application/octet-stream”}
 response = requests.post(url, json=data, headers=headers)
 <a href="#id23"><span class="problematic" id="id24">``</span></a><a href="#id25"><span class="problematic" id="id26">`</span></a></p>
 </section>
@@ -944,11 +944,6 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.openai_proxy">
-<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">openai_proxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whylabs_dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Header(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.openai_proxy" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.publish_profiles">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">publish_profiles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.publish_profiles" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -962,6 +957,44 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.status">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse" title="whylogs_container.whylabs.container.responses.ProcessLoggerStatusResponse"><span class="pre">ProcessLoggerStatusResponse</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.status" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.routes.validate_llm">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.routes.</span></span><span class="sig-name descname"><span class="pre">validate_llm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_raw_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Response</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html#whylogs_container.whylabs.llm_validation.metadata.ValidationReport" title="whylogs_container.whylabs.llm_validation.metadata.ValidationReport"><span class="pre">ValidationReport</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.routes.validate_llm" title="Permalink to this definition">#</a></dt>
+<dd><p>This endpoint can be used to synchronously get validation results from a single input
+prompt/response. It automatically performs whylogs profiling and sends profiles to
+whylabs in the background, just like  the /log endpoint.</p>
+<p>## Sample curl request:</p>
+<p><a href="#id27"><span class="problematic" id="id28">``</span></a><a href="#id29"><span class="problematic" id="id30">`</span></a>bash
+curl -X ‘POST’     -H “X-API-Key: &lt;password&gt;”     -H “Content-Type: application/octet-stream”     ‘<a class="reference external" href="http://localhost:8000/validate/llm">http://localhost:8000/validate/llm</a>’     –data-raw ‘{</p>
+<blockquote>
+<div><p>“datasetId”: “model-62”,
+“prompt”: “This is a test prompt”,
+“response”: “This is a test response”</p>
+</div></blockquote>
+<section id="id31">
+<h3>}’<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<p>## Sample Python request:
+<a href="#id32"><span class="problematic" id="id33">``</span></a><a href="#id34"><span class="problematic" id="id35">`</span></a>python
+import requests</p>
+<p># Define your API key
+api_key = “&lt;password&gt;”</p>
+<p># API endpoint
+url = ‘<a class="reference external" href="http://localhost:8000/validate/llm">http://localhost:8000/validate/llm</a>’</p>
+<p># Sample data
+data = {</p>
+<blockquote>
+<div><p>“datasetId”: “model-62”,
+“prompt”: “This is a test prompt”,
+“response”: “This is a test response”</p>
+</div></blockquote>
+<p>}</p>
+<p># Make the POST request
+headers = {“X-API-Key”: api_key, “Content-Type”: “application/octet-stream”}
+response = requests.post(url, json=data, headers=headers)
+<a href="#id36"><span class="problematic" id="id37">``</span></a><a href="#id38"><span class="problematic" id="id39">`</span></a></p>
+</section>
+</dd></dl>
 
 </section>
 <section id="module-whylogs_container.whylabs.container.startup">
@@ -1189,10 +1222,10 @@ because it has a steep performance penalty compared to the normal /log endpoint.
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_json"><code class="docutils literal notranslate"><span class="pre">log_json()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_pubsub"><code class="docutils literal notranslate"><span class="pre">log_pubsub()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.log_pubsub_embeddings"><code class="docutils literal notranslate"><span class="pre">log_pubsub_embeddings()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.openai_proxy"><code class="docutils literal notranslate"><span class="pre">openai_proxy()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.publish_profiles"><code class="docutils literal notranslate"><span class="pre">publish_profiles()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.shutdown"><code class="docutils literal notranslate"><span class="pre">shutdown()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.status"><code class="docutils literal notranslate"><span class="pre">status()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.validate_llm"><code class="docutils literal notranslate"><span class="pre">validate_llm()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.startup">whylogs_container.whylabs.container.startup module</a><ul>
