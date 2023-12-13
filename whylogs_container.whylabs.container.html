@@ -370,7 +370,7 @@
 <h3>Required<a class="headerlink" href="#required" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><cite>WHYLABS_API_KEY</cite></p></li>
-<li><p><cite>DEFAULT_WHYLABS_ORG_ID</cite></p></li>
+<li><p><cite>DEFAULT_WHYLABS_ORG_ID</cite> if you’re using an old api key that doesn’t have an org id at the end of it.</p></li>
 </ul>
 </section>
 <section id="optional">
@@ -382,8 +382,6 @@
 <li><p><cite>CONTAINER_PASSWORD</cite>. Required if DISABLE_CONTAINER_PASSWORD is not set to True.</p></li>
 <li><p><cite>DISABLE_CONTAINER_PASSWORD</cite></p></li>
 <li><p><cite>FAIL_STARTUP_WITHOUT_CONFIG</cite></p></li>
-<li><p><cite>OPENAI_API_KEY</cite>. Required if you’re using LLM/Openapi monitoring. # TODO is this true? Isn’t it sent per request?</p></li>
-<li><p><cite>OPENAI_ORGANIZATION</cite>. Required if you’re using LLM/Openapi monitoring.</p></li>
 </ul>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD">
