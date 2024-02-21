@@ -28,18 +28,34 @@ whylogs\_container.whylabs.container.config\_test module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.container.container\_config module
--------------------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.container.container_config
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 whylogs\_container.whylabs.container.environment module
 -------------------------------------------------------
 
 .. automodule:: whylogs_container.whylabs.container.environment
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+whylogs\_container.whylabs.container.file\_read\_utils module
+-------------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.file_read_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+whylogs\_container.whylabs.container.lazy module
+------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.lazy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+whylogs\_container.whylabs.container.policy module
+--------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.policy
    :members:
    :undoc-members:
    :show-inheritance:
@@ -68,10 +84,26 @@ whylogs\_container.whylabs.container.routes module
    :undoc-members:
    :show-inheritance:
 
+whylogs\_container.whylabs.container.s3\_sync module
+----------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.s3_sync
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.whylabs.container.startup module
 ---------------------------------------------------
 
 .. automodule:: whylogs_container.whylabs.container.startup
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+whylogs\_container.whylabs.container.version module
+---------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.version
    :members:
    :undoc-members:
    :show-inheritance:
