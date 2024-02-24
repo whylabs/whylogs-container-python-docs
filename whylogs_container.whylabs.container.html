@@ -223,6 +223,11 @@
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ConfigActor.is_process_alive">
+<span class="sig-name descname"><span class="pre">is_process_alive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ConfigActor.is_process_alive" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.ConfigActor.process_batch">
 <span class="sig-name descname"><span class="pre">process_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.ConfigActor.process_batch" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -351,6 +356,11 @@ they were originally defined in the custom configuration.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.SynchronousConfig.close_process">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">close_process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.SynchronousConfig.close_process" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.config.SynchronousConfig.is_process_alive">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_process_alive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.config.SynchronousConfig.is_process_alive" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1577,6 +1587,7 @@ large inputs.</p>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor"><code class="docutils literal notranslate"><span class="pre">ConfigActor</span></code></a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor.close_process"><code class="docutils literal notranslate"><span class="pre">ConfigActor.close_process()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor.handle_refresh_message"><code class="docutils literal notranslate"><span class="pre">ConfigActor.handle_refresh_message()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor.is_process_alive"><code class="docutils literal notranslate"><span class="pre">ConfigActor.is_process_alive()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor.process_batch"><code class="docutils literal notranslate"><span class="pre">ConfigActor.process_batch()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor.process_close_message"><code class="docutils literal notranslate"><span class="pre">ConfigActor.process_close_message()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.ConfigActor.run"><code class="docutils literal notranslate"><span class="pre">ConfigActor.run()</span></code></a></li>
@@ -1611,6 +1622,7 @@ large inputs.</p>
 </li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.SynchronousConfig"><code class="docutils literal notranslate"><span class="pre">SynchronousConfig</span></code></a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.SynchronousConfig.close_process"><code class="docutils literal notranslate"><span class="pre">SynchronousConfig.close_process()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.config.SynchronousConfig.is_process_alive"><code class="docutils literal notranslate"><span class="pre">SynchronousConfig.is_process_alive()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.SynchronousConfig.refresh"><code class="docutils literal notranslate"><span class="pre">SynchronousConfig.refresh()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config.SynchronousConfig.start_process"><code class="docutils literal notranslate"><span class="pre">SynchronousConfig.start_process()</span></code></a></li>
 </ul>
