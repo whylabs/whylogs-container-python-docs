@@ -44,6 +44,14 @@ whylogs\_container.whylabs.container.file\_read\_utils module
    :undoc-members:
    :show-inheritance:
 
+whylogs\_container.whylabs.container.hashable\_dict module
+----------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.hashable_dict
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.whylabs.container.lazy module
 ------------------------------------------------
 
