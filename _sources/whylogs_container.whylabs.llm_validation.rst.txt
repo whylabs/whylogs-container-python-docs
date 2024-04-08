@@ -4,6 +4,14 @@ whylogs\_container.whylabs.llm\_validation package
 Submodules
 ----------
 
+whylogs\_container.whylabs.llm\_validation.actions module
+---------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.llm_validation.actions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.whylabs.llm\_validation.metadata module
 ----------------------------------------------------------
 
