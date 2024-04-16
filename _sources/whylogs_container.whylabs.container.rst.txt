@@ -1,6 +1,14 @@
 whylogs\_container.whylabs.container package
 ============================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   whylogs_container.whylabs.container.policy
+
 Submodules
 ----------
 
@@ -52,10 +60,10 @@ whylogs\_container.whylabs.container.lazy module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.container.policy module
---------------------------------------------------
+whylogs\_container.whylabs.container.otel module
+------------------------------------------------
 
-.. automodule:: whylogs_container.whylabs.container.policy
+.. automodule:: whylogs_container.whylabs.container.otel
    :members:
    :undoc-members:
    :show-inheritance:
