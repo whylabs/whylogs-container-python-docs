@@ -68,6 +68,14 @@ whylogs\_container.whylabs.container.otel module
    :undoc-members:
    :show-inheritance:
 
+whylogs\_container.whylabs.container.policy\_downloader module
+--------------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.policy_downloader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.whylabs.container.requests module
 ----------------------------------------------------
 
@@ -104,6 +112,14 @@ whylogs\_container.whylabs.container.startup module
 ---------------------------------------------------
 
 .. automodule:: whylogs_container.whylabs.container.startup
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+whylogs\_container.whylabs.container.startup\_util module
+---------------------------------------------------------
+
+.. automodule:: whylogs_container.whylabs.container.startup_util
    :members:
    :undoc-members:
    :show-inheritance:
