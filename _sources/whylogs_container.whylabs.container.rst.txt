@@ -100,14 +100,6 @@ whylogs\_container.whylabs.container.routes module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.container.s3\_sync module
-----------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.container.s3_sync
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 whylogs\_container.whylabs.container.startup module
 ---------------------------------------------------
 
