@@ -747,358 +747,6 @@ they were originally defined in the custom configuration.</p>
 <dd></dd></dl>
 
 </section>
-<section id="module-whylogs_container.whylabs.container.environment">
-<span id="whylogs-container-whylabs-container-environment-module"></span><h2>whylogs_container.whylabs.container.environment module<a class="headerlink" href="#module-whylogs_container.whylabs.container.environment" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.environment.</span></span><span class="sig-name descname"><span class="pre">EnvVarNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
-<p>This Enum class contains all the environment variable names used in the application.</p>
-<section id="required">
-<h3>Required<a class="headerlink" href="#required" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><cite>WHYLABS_API_KEY</cite></p></li>
-<li><p><cite>DEFAULT_WHYLABS_ORG_ID</cite> if you’re using an old api key that doesn’t have an org id at the end of it.</p></li>
-</ul>
-</section>
-<section id="optional">
-<h3>Optional<a class="headerlink" href="#optional" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><cite>DEFAULT_WHYLABS_DATASET_CADENCE</cite></p></li>
-<li><p><cite>DEFAULT_WHYLABS_UPLOAD_CADENCE</cite></p></li>
-<li><p><cite>DEFAULT_WHYLABS_UPLOAD_INTERVAL</cite></p></li>
-<li><p><cite>CONTAINER_PASSWORD</cite>. Required if DISABLE_CONTAINER_PASSWORD is not set to True.</p></li>
-<li><p><cite>DISABLE_CONTAINER_PASSWORD</cite></p></li>
-<li><p><cite>FAIL_STARTUP_WITHOUT_CONFIG</cite></p></li>
-</ul>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.AUTO_PULL_WHYLABS_POLICY_MODEL_IDS">
-<span class="sig-name descname"><span class="pre">AUTO_PULL_WHYLABS_POLICY_MODEL_IDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AUTO_PULL_WHYLABS_POLICY_MODEL_IDS'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.AUTO_PULL_WHYLABS_POLICY_MODEL_IDS" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. If set, the container will automatically pull policies from WhyLabs for the given model ids.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.AWS_SQS_DLQ_URL">
-<span class="sig-name descname"><span class="pre">AWS_SQS_DLQ_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AWS_SQS_DLQ_URL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.AWS_SQS_DLQ_URL" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The URL of the AWS SQS dead letter queue to send messages that can’t be processed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.AWS_SQS_URL">
-<span class="sig-name descname"><span class="pre">AWS_SQS_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AWS_SQS_URL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.AWS_SQS_URL" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The URL of the AWS SQS queue to poll for messages.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.CONFIG_SYNC_CADENCE">
-<span class="sig-name descname"><span class="pre">CONFIG_SYNC_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONFIG_SYNC_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONFIG_SYNC_CADENCE" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The cadence at which the container will sync remote policies. Can be H (hourly), M (minute), or D (daily).
-Defaults to MINUTE.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.CONFIG_SYNC_INTERVAL">
-<span class="sig-name descname"><span class="pre">CONFIG_SYNC_INTERVAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONFIG_SYNC_INTERVAL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONFIG_SYNC_INTERVAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The interval at which the container will sync remote policies. This is the number of units of time (hours,
-minutes, or days) that the container will wait before syncing the remote policies.
-Defaults to 15.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD">
-<span class="sig-name descname"><span class="pre">CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
-<dd><p>Password for the container. The container looks for this password in a header for each request. This is the curl
-format for sending the header: <cite>-H “Authorization: Bearer my_password”</cite></p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_DATASET_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_DATASET_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE" title="Permalink to this definition">#</a></dt>
-<dd><p>Can be DAILY (default) or HOURLY. This is used whenever the cadence is not
-specified in the dataset schema, or if you don’t specify a dataset schema.
-This determines how data is bucketed in the container. Data for each profile
-will be pooled by the hour, minute, or day.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_ORG_ID">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_ORG_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_ORG_ID'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_ORG_ID" title="Permalink to this definition">#</a></dt>
-<dd><p>Required. Organization ID for WhyLabs.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE" title="Permalink to this definition">#</a></dt>
-<dd><p>Can be H (default), M, or D. This determines how often profiles are uploaded to WhyLabs.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL">
-<span class="sig-name descname"><span class="pre">DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DEFAULT_WHYLABS_UPLOAD_INTERVAL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL" title="Permalink to this definition">#</a></dt>
-<dd><p>Default interval for WhyLabs uploads. This determines how many units of time (hours, minutes, or days)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_CONTAINER_PASSWORD">
-<span class="sig-name descname"><span class="pre">DISABLE_CONTAINER_PASSWORD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DISABLE_CONTAINER_PASSWORD'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_CONTAINER_PASSWORD" title="Permalink to this definition">#</a></dt>
-<dd><p>If set to True, the container will not require a password for requests. Then you can omit the <cite>CONTAINER_PASSWORD</cite>
-environment variable.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_TRACING">
-<span class="sig-name descname"><span class="pre">DISABLE_TRACING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DISABLE_TRACING'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_TRACING" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. If set to True, the container will not send trace data to WhyLabs.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG">
-<span class="sig-name descname"><span class="pre">FAIL_STARTUP_WITHOUT_CONFIG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FAIL_STARTUP_WITHOUT_CONFIG'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG" title="Permalink to this definition">#</a></dt>
-<dd><p>If set to True, the container will fail to start if no custom configuration is found. This is a safeguard if you
-want to make sure you set up the container correctly and you’re using python to configure dataset schemas for
-whylogs.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_POLICIES">
-<span class="sig-name descname"><span class="pre">FAIL_STARTUP_WITHOUT_POLICIES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FAIL_STARTUP_WITHOUT_POLICIES'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_POLICIES" title="Permalink to this definition">#</a></dt>
-<dd><p>Just like FAIL_STARTUP_WITHOUT_CONFIG but for yaml policies instead of custom python configuration.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER">
-<span class="sig-name descname"><span class="pre">LLM_CONTAINER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LLM_CONTAINER'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER" title="Permalink to this definition">#</a></dt>
-<dd><p>Env var to identify if the deployment is of the type LLM or not. Defaults to False, but set to
-True on LLM image build</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.LOG_LEVEL">
-<span class="sig-name descname"><span class="pre">LOG_LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LOG_LEVEL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LOG_LEVEL" title="Permalink to this definition">#</a></dt>
-<dd><p>Defaults to INFO. The log level for the container. Can be DEBUG, INFO, WARNING, ERROR, or CRITICAL.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BATCH_SIZE">
-<span class="sig-name descname"><span class="pre">MAX_REQUEST_BATCH_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BATCH_SIZE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BATCH_SIZE" title="Permalink to this definition">#</a></dt>
-<dd><p>Defaults to 50_000. Maximum number of requests to process per batch. Requests are placed onto a queue after they come in from the REST
-server process and they’re read from that queue by the whylogs process and handled in bulk. The larger the batch,
-the longer it takes to handle each batch. This is mostly transparent to callers. This ends up mattering when the
-container has so many requests queue’d up because throughput is too high that it can’t keep up. In that case, the
-requestors will end up waiting for the batches to be processed, which could potentially take minutes.</p>
-<p>You would consider lowering this number if you’re seeing a lot of requests timing out and you have high tps (relative
-to our whylogs container doc page’s performance load testing numbers).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES">
-<span class="sig-name descname"><span class="pre">MAX_REQUEST_BUFFER_BYTES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAX_REQUEST_BUFFER_BYTES'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES" title="Permalink to this definition">#</a></dt>
-<dd><p>Defaults to 1_000_000_000 (1GB). The size of the buffer that requests are put onto after they come in from the REST server process.
-Increasing this would give you more time to process requests before they start timing out. It could be a good idea
-to increase this number if you’re seeing request timeouts for spikey traffic patterns, or if you have more memory
-on the host and nothing better to do with it.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.POLICY_BASE_DIR">
-<span class="sig-name descname"><span class="pre">POLICY_BASE_DIR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'POLICY_CONFIG_BASE_DIR'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.POLICY_BASE_DIR" title="Permalink to this definition">#</a></dt>
-<dd><p>Env var to identify the root directory for policy configs. Defaults to /whylogs_container/whylogs_config/</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_BUCKET_NAME">
-<span class="sig-name descname"><span class="pre">S3_CONFIG_BUCKET_NAME</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'S3_CONFIG_BUCKET_NAME'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_BUCKET_NAME" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The name of the S3 bucket where the container will look for YAML files to keep in sync with.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_PREFIX">
-<span class="sig-name descname"><span class="pre">S3_CONFIG_PREFIX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'S3_CONFIG_PREFIX'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_PREFIX" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The prefix of the S3 bucket where the container will look for YAML files to keep in sync with.
-If not defined, it will look for files on the bucket’s root.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC">
-<span class="sig-name descname"><span class="pre">S3_CONFIG_SYNC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'S3_CONFIG_SYNC'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. If set to True, the container will sync S3 YAML config files with the container and parse them into schemas.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_CADENCE">
-<span class="sig-name descname"><span class="pre">S3_CONFIG_SYNC_CADENCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'S3_CONFIG_SYNC_CADENCE'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_CADENCE" title="Permalink to this definition">#</a></dt>
-<dd><p>DEPRECATED, use  CONFIG_SYNC_CADENCE. use  Optional. The cadence at which the container will sync the S3 bucket’s YAML files.
-Can be H (hourly), M (minute), or D (daily).
-Defaults to MINUTE.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_INTERVAL">
-<span class="sig-name descname"><span class="pre">S3_CONFIG_SYNC_INTERVAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'S3_CONFIG_SYNC_INTERVAL'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_INTERVAL" title="Permalink to this definition">#</a></dt>
-<dd><p>DEPRECATED, use CONFIG_SYNC_INTERVAL. Optional. The interval at which the container will sync the S3 bucket’s YAML files. This is the
-number of units of time (hours, minutes, or days) that the container will wait before syncing the S3 bucket with container schemas.
-Defaults to 15.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_ROLE_ARN">
-<span class="sig-name descname"><span class="pre">S3_CONFIG_SYNC_ROLE_ARN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'S3_CONFIG_SYNC_ROLE_ARN'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_ROLE_ARN" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The role ARN to assume when syncing S3 bucket’s YAML files. If not defined, the container will use the
-look for the standard AWS credentials in the environment.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.TRACE_ENDPOINT">
-<span class="sig-name descname"><span class="pre">TRACE_ENDPOINT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TRACE_ENDPOINT'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.TRACE_ENDPOINT" title="Permalink to this definition">#</a></dt>
-<dd><p>Optional. The endpoint to send trace data to. If not set, traces are sent to WhyLabs production.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvVarNames.WHYLABS_API_KEY">
-<span class="sig-name descname"><span class="pre">WHYLABS_API_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WHYLABS_API_KEY'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvVarNames.WHYLABS_API_KEY" title="Permalink to this definition">#</a></dt>
-<dd><p>Required. API key for WhyLabs.</p>
-</dd></dl>
-
-</section>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.environment.</span></span><span class="sig-name descname"><span class="pre">EnvironmentVariables</span></span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.assert_llm_endpoint">
-<span class="sig-name descname"><span class="pre">assert_llm_endpoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.assert_llm_endpoint" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.auth_disabled">
-<span class="sig-name descname"><span class="pre">auth_disabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.auth_disabled" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.auto_pull_whylabs_policy_model_ids">
-<span class="sig-name descname"><span class="pre">auto_pull_whylabs_policy_model_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.auto_pull_whylabs_policy_model_ids" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.aws_sqs_dlq_url">
-<span class="sig-name descname"><span class="pre">aws_sqs_dlq_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.aws_sqs_dlq_url" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.aws_sqs_url">
-<span class="sig-name descname"><span class="pre">aws_sqs_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.aws_sqs_url" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.config_sync_cadence">
-<span class="sig-name descname"><span class="pre">config_sync_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.config_sync_cadence" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.config_sync_interval">
-<span class="sig-name descname"><span class="pre">config_sync_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.config_sync_interval" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.container_password">
-<span class="sig-name descname"><span class="pre">container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.container_password" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.default_dataset_cadence">
-<span class="sig-name descname"><span class="pre">default_dataset_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetCadence</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_dataset_cadence" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_org_id">
-<span class="sig-name descname"><span class="pre">default_whylabs_org_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_org_id" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_upload_cadence">
-<span class="sig-name descname"><span class="pre">default_whylabs_upload_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_upload_cadence" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_upload_interval">
-<span class="sig-name descname"><span class="pre">default_whylabs_upload_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_upload_interval" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.disable_container_password">
-<span class="sig-name descname"><span class="pre">disable_container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.disable_container_password" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.disable_tracing">
-<span class="sig-name descname"><span class="pre">disable_tracing</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.disable_tracing" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.fail_startup_without_config">
-<span class="sig-name descname"><span class="pre">fail_startup_without_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.fail_startup_without_config" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.fail_startup_without_policies">
-<span class="sig-name descname"><span class="pre">fail_startup_without_policies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.fail_startup_without_policies" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.llm_container">
-<span class="sig-name descname"><span class="pre">llm_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.llm_container" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.log_level">
-<span class="sig-name descname"><span class="pre">log_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.log_level" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.policy_base_dir">
-<span class="sig-name descname"><span class="pre">policy_base_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.policy_base_dir" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_bucket_name">
-<span class="sig-name descname"><span class="pre">s3_config_bucket_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_bucket_name" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_prefix">
-<span class="sig-name descname"><span class="pre">s3_config_prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_prefix" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync">
-<span class="sig-name descname"><span class="pre">s3_config_sync</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync_cadence">
-<span class="sig-name descname"><span class="pre">s3_config_sync_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync_cadence" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync_interval">
-<span class="sig-name descname"><span class="pre">s3_config_sync_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync_interval" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.trace_endpoint">
-<span class="sig-name descname"><span class="pre">trace_endpoint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.trace_endpoint" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="whylogs_container.whylabs.container.environment.EnvironmentVariables.whylabs_api_key">
-<span class="sig-name descname"><span class="pre">whylabs_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.whylabs_api_key" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</section>
 <section id="module-whylogs_container.whylabs.container.file_read_utils">
 <span id="whylogs-container-whylabs-container-file-read-utils-module"></span><h2>whylogs_container.whylabs.container.file_read_utils module<a class="headerlink" href="#module-whylogs_container.whylabs.container.file_read_utils" title="Permalink to this heading">#</a></h2>
 <dl class="py function">
@@ -1759,11 +1407,277 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
 <dd></dd></dl>
 
 </section>
+<section id="module-whylogs_container.whylabs.container.server_config">
+<span id="whylogs-container-whylabs-container-server-config-module"></span><h2>whylogs_container.whylabs.container.server_config module<a class="headerlink" href="#module-whylogs_container.whylabs.container.server_config" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.CustomSettingsSource">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.server_config.</span></span><span class="sig-name descname"><span class="pre">CustomSettingsSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings_cls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span><span class="p"><span class="pre">[</span></span><span class="pre">BaseSettings</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">case_sensitive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_nested_delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_ignore_empty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_parse_none_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.CustomSettingsSource" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">EnvSettingsSource</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.CustomSettingsSource.prepare_field_value">
+<span class="sig-name descname"><span class="pre">prepare_field_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FieldInfo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_is_complex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.CustomSettingsSource.prepare_field_value" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepare value for the field.</p>
+<ul class="simple">
+<li><p>Extract value for nested field.</p></li>
+<li><p>Deserialize value to python object for complex field.</p></li>
+</ul>
+<dl class="simple">
+<dt>Args:</dt><dd><p>field: The field.
+field_name: The field name.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A tuple contains prepared value for the field.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValuesError: When There is an error in deserializing value for complex field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.server_config.</span></span><span class="sig-name descname"><span class="pre">ServerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_case_sensitive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DotenvType</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_ignore_empty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_none_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whylabs_api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_container_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_dataset_cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetCadence</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DatasetCadence.HOURLY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_whylabs_upload_cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetUploadCadenceGranularity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DatasetUploadCadenceGranularity.HOUR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_whylabs_upload_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail_startup_without_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fail_startup_without_policies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llm_container</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3_config_sync</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3_config_bucket_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3_config_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3_config_sync_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s3_config_sync_cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetUploadCadenceGranularity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DatasetUploadCadenceGranularity.MINUTE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_sync_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_sync_cadence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DatasetUploadCadenceGranularity</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">DatasetUploadCadenceGranularity.MINUTE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy_base_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'./whylogs_container/whylogs_config/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_endpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'https://api.whylabsapp.com/v1/traces'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_tracing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_pull_whylabs_policy_model_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aws_sqs_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aws_sqs_dlq_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_request_batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_request_buffer_bytes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000000000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSettings</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.assert_llm_endpoint">
+<span class="sig-name descname"><span class="pre">assert_llm_endpoint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.assert_llm_endpoint" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.auth_disabled">
+<span class="sig-name descname"><span class="pre">auth_disabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.auth_disabled" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.auto_pull_whylabs_policy_model_ids">
+<span class="sig-name descname"><span class="pre">auto_pull_whylabs_policy_model_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.auto_pull_whylabs_policy_model_ids" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. If set, the container will automatically pull policies from WhyLabs for the given model ids.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.aws_sqs_dlq_url">
+<span class="sig-name descname"><span class="pre">aws_sqs_dlq_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.aws_sqs_dlq_url" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The URL of the AWS SQS dead letter queue to send messages that can’t be processed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.aws_sqs_url">
+<span class="sig-name descname"><span class="pre">aws_sqs_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.aws_sqs_url" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The URL of the AWS SQS queue to poll for messages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.check_field_b_if_field_a">
+<span class="sig-name descname"><span class="pre">check_field_b_if_field_a</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Self</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.check_field_b_if_field_a" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.config_sync_cadence">
+<span class="sig-name descname"><span class="pre">config_sync_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.config_sync_cadence" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The cadence at which the container will sync remote policies. Can be H (hourly), M (minute), or D (daily).
+Defaults to MINUTE.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.config_sync_interval">
+<span class="sig-name descname"><span class="pre">config_sync_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.config_sync_interval" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The interval at which the container will sync remote policies. This is the number of units of time (hours,
+minutes, or days) that the container will wait before syncing the remote policies.
+Defaults to 15.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.container_password">
+<span class="sig-name descname"><span class="pre">container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.container_password" title="Permalink to this definition">#</a></dt>
+<dd><p>Password for the container. The container looks for this password in a header for each request. This is the curl
+format for sending the header: <cite>-H “Authorization: Bearer my_password”</cite></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.default_dataset_cadence">
+<span class="sig-name descname"><span class="pre">default_dataset_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetCadence</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.default_dataset_cadence" title="Permalink to this definition">#</a></dt>
+<dd><p>Can be DAILY (default) or HOURLY. This is used whenever the cadence is not
+specified in the dataset schema, or if you don’t specify a dataset schema.
+This determines how data is bucketed in the container. Data for each profile
+will be pooled by the hour, minute, or day.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.default_whylabs_upload_cadence">
+<span class="sig-name descname"><span class="pre">default_whylabs_upload_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.default_whylabs_upload_cadence" title="Permalink to this definition">#</a></dt>
+<dd><p>Can be H (default), M, or D. This determines how often profiles are uploaded to WhyLabs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.default_whylabs_upload_interval">
+<span class="sig-name descname"><span class="pre">default_whylabs_upload_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.default_whylabs_upload_interval" title="Permalink to this definition">#</a></dt>
+<dd><p>Default interval for WhyLabs uploads. This determines how many units of time (hours, minutes, or days)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.disable_container_password">
+<span class="sig-name descname"><span class="pre">disable_container_password</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.disable_container_password" title="Permalink to this definition">#</a></dt>
+<dd><p>If set to True, the container will not require a password for requests. Then you can omit the <cite>CONTAINER_PASSWORD</cite>
+environment variable.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.disable_tracing">
+<span class="sig-name descname"><span class="pre">disable_tracing</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.disable_tracing" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. If set to True, the container will not send trace data to WhyLabs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.fail_startup_without_config">
+<span class="sig-name descname"><span class="pre">fail_startup_without_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.fail_startup_without_config" title="Permalink to this definition">#</a></dt>
+<dd><p>If set to True, the container will fail to start if no custom configuration is found. This is a safeguard if you
+want to make sure you set up the container correctly and you’re using python to configure dataset schemas for
+whylogs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.fail_startup_without_policies">
+<span class="sig-name descname"><span class="pre">fail_startup_without_policies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.fail_startup_without_policies" title="Permalink to this definition">#</a></dt>
+<dd><p>Just like FAIL_STARTUP_WITHOUT_CONFIG but for yaml policies instead of custom python configuration.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.llm_container">
+<span class="sig-name descname"><span class="pre">llm_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.llm_container" title="Permalink to this definition">#</a></dt>
+<dd><p>Env var to identify if the deployment is of the type LLM or not. Defaults to False, but set to
+True on LLM image build</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.log_level" title="Permalink to this definition">#</a></dt>
+<dd><p>Defaults to INFO. The log level for the container. Can be DEBUG, INFO, WARNING, ERROR, or CRITICAL.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.max_request_batch_size">
+<span class="sig-name descname"><span class="pre">max_request_batch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.max_request_batch_size" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The maximum number of profiles that can be sent in a single request. Defaults to 50,000.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.max_request_buffer_bytes">
+<span class="sig-name descname"><span class="pre">max_request_buffer_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.max_request_buffer_bytes" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The maximum number of bytes that can be sent in a single request. Defaults to 1,000,000,000.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.model_computed_fields" title="Permalink to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">SettingsConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'case_sensitive':</span> <span class="pre">False,</span> <span class="pre">'env_file':</span> <span class="pre">None,</span> <span class="pre">'env_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'env_ignore_empty':</span> <span class="pre">True,</span> <span class="pre">'env_nested_delimiter':</span> <span class="pre">None,</span> <span class="pre">'env_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'env_prefix':</span> <span class="pre">'',</span> <span class="pre">'extra':</span> <span class="pre">'forbid',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'json_file':</span> <span class="pre">None,</span> <span class="pre">'json_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'protected_namespaces':</span> <span class="pre">('model_',</span> <span class="pre">'settings_'),</span> <span class="pre">'secrets_dir':</span> <span class="pre">None,</span> <span class="pre">'toml_file':</span> <span class="pre">None,</span> <span class="pre">'validate_default':</span> <span class="pre">True,</span> <span class="pre">'yaml_file':</span> <span class="pre">None,</span> <span class="pre">'yaml_file_encoding':</span> <span class="pre">None}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.model_config" title="Permalink to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'auto_pull_whylabs_policy_model_ids':</span> <span class="pre">FieldInfo(annotation=List[str],</span> <span class="pre">required=False,</span> <span class="pre">default=[]),</span> <span class="pre">'aws_sqs_dlq_url':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'aws_sqs_url':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'config_sync_cadence':</span> <span class="pre">FieldInfo(annotation=DatasetUploadCadenceGranularity,</span> <span class="pre">required=False,</span> <span class="pre">default=&lt;DatasetUploadCadenceGranularity.MINUTE:</span> <span class="pre">'M'&gt;),</span> <span class="pre">'config_sync_interval':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default=15),</span> <span class="pre">'container_password':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'default_dataset_cadence':</span> <span class="pre">FieldInfo(annotation=DatasetCadence,</span> <span class="pre">required=False,</span> <span class="pre">default=&lt;DatasetCadence.HOURLY:</span> <span class="pre">'HOURLY'&gt;),</span> <span class="pre">'default_whylabs_upload_cadence':</span> <span class="pre">FieldInfo(annotation=DatasetUploadCadenceGranularity,</span> <span class="pre">required=False,</span> <span class="pre">default=&lt;DatasetUploadCadenceGranularity.HOUR:</span> <span class="pre">'H'&gt;),</span> <span class="pre">'default_whylabs_upload_interval':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default=5),</span> <span class="pre">'disable_container_password':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=False),</span> <span class="pre">'disable_tracing':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=False),</span> <span class="pre">'fail_startup_without_config':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=False),</span> <span class="pre">'fail_startup_without_policies':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=False),</span> <span class="pre">'llm_container':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=False),</span> <span class="pre">'log_level':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default=20),</span> <span class="pre">'max_request_batch_size':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default=50000),</span> <span class="pre">'max_request_buffer_bytes':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default=1000000000),</span> <span class="pre">'policy_base_dir':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=False,</span> <span class="pre">default='./whylogs_container/whylogs_config/'),</span> <span class="pre">'s3_config_bucket_name':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=False,</span> <span class="pre">default=''),</span> <span class="pre">'s3_config_prefix':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=False,</span> <span class="pre">default=''),</span> <span class="pre">'s3_config_sync':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=False),</span> <span class="pre">'s3_config_sync_cadence':</span> <span class="pre">FieldInfo(annotation=DatasetUploadCadenceGranularity,</span> <span class="pre">required=False,</span> <span class="pre">default=&lt;DatasetUploadCadenceGranularity.MINUTE:</span> <span class="pre">'M'&gt;),</span> <span class="pre">'s3_config_sync_interval':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default=15),</span> <span class="pre">'trace_endpoint':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=False,</span> <span class="pre">default='https://api.whylabsapp.com/v1/traces'),</span> <span class="pre">'whylabs_api_key':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.model_fields" title="Permalink to this definition">#</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.parse_log_level">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parse_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.parse_log_level" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.policy_base_dir">
+<span class="sig-name descname"><span class="pre">policy_base_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.policy_base_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>Env var to identify the root directory for policy configs. Defaults to /whylogs_container/whylogs_config/</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_bucket_name">
+<span class="sig-name descname"><span class="pre">s3_config_bucket_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_bucket_name" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The name of the S3 bucket where the container will look for YAML files to keep in sync with.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_prefix">
+<span class="sig-name descname"><span class="pre">s3_config_prefix</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_prefix" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The prefix of the S3 bucket where the container will look for YAML files to keep in sync with.
+If not defined, it will look for files on the bucket’s root.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync">
+<span class="sig-name descname"><span class="pre">s3_config_sync</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. If set to True, the container will sync S3 YAML config files with the container and parse them into schemas.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync_cadence">
+<span class="sig-name descname"><span class="pre">s3_config_sync_cadence</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DatasetUploadCadenceGranularity</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync_cadence" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The cadence at which the container will sync the S3 bucket’s YAML files.
+Can be H (hourly), M (minute), or D (daily).
+Defaults to MINUTE.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync_interval">
+<span class="sig-name descname"><span class="pre">s3_config_sync_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync_interval" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The interval at which the container will sync the S3 bucket’s YAML files. This is the
+number of units of time (hours, minutes, or days) that the container will wait before syncing the S3 bucket with container schemas.
+Defaults to 15.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.settings_customise_sources">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">settings_customise_sources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings_cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dotenv_settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_secret_settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.settings_customise_sources" title="Permalink to this definition">#</a></dt>
+<dd><p>Define the sources and their order for loading the settings values.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>settings_cls: The Settings class.
+init_settings: The <cite>InitSettingsSource</cite> instance.
+env_settings: The <cite>EnvSettingsSource</cite> instance.
+dotenv_settings: The <cite>DotEnvSettingsSource</cite> instance.
+file_secret_settings: The <cite>SecretsSettingsSource</cite> instance.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A tuple containing the sources and their order for loading the settings values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.trace_endpoint">
+<span class="sig-name descname"><span class="pre">trace_endpoint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.trace_endpoint" title="Permalink to this definition">#</a></dt>
+<dd><p>Optional. The endpoint to send trace data to. If not set, traces are sent to WhyLabs production.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.ServerConfig.whylabs_api_key">
+<span class="sig-name descname"><span class="pre">whylabs_api_key</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.ServerConfig.whylabs_api_key" title="Permalink to this definition">#</a></dt>
+<dd><p>Required. API key for WhyLabs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.get_server_config">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.server_config.</span></span><span class="sig-name descname"><span class="pre">get_server_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig" title="whylogs_container.whylabs.container.server_config.ServerConfig"><span class="pre">ServerConfig</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.get_server_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.server_config.set_server_config">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.server_config.</span></span><span class="sig-name descname"><span class="pre">set_server_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig" title="whylogs_container.whylabs.container.server_config.ServerConfig"><span class="pre">ServerConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.server_config.set_server_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
 <section id="module-whylogs_container.whylabs.container.startup">
 <span id="whylogs-container-whylabs-container-startup-module"></span><h2>whylogs_container.whylabs.container.startup module<a class="headerlink" href="#module-whylogs_container.whylabs.container.startup" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.startup.Server">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">Server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setup_logging</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.startup.Server" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.startup.</span></span><span class="sig-name descname"><span class="pre">Server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setup_logging</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overide_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig" title="whylogs_container.whylabs.container.server_config.ServerConfig"><span class="pre">ServerConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.startup.Server" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.startup.Server.server_shutdown">
@@ -1905,68 +1819,6 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.config_test">whylogs_container.whylabs.container.config_test module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.config_test.test_indexing_into_toolkit"><code class="docutils literal notranslate"><span class="pre">test_indexing_into_toolkit()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-whylogs_container.whylabs.container.environment">whylogs_container.whylabs.container.environment module</a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames"><code class="docutils literal notranslate"><span class="pre">EnvVarNames</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.AUTO_PULL_WHYLABS_POLICY_MODEL_IDS"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.AUTO_PULL_WHYLABS_POLICY_MODEL_IDS</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.AWS_SQS_DLQ_URL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.AWS_SQS_DLQ_URL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.AWS_SQS_URL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.AWS_SQS_URL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONFIG_SYNC_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.CONFIG_SYNC_CADENCE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONFIG_SYNC_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.CONFIG_SYNC_INTERVAL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.CONTAINER_PASSWORD</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_DATASET_CADENCE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_ORG_ID"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_ORG_ID</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_CADENCE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DEFAULT_WHYLABS_UPLOAD_INTERVAL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_CONTAINER_PASSWORD"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DISABLE_CONTAINER_PASSWORD</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.DISABLE_TRACING"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.DISABLE_TRACING</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.FAIL_STARTUP_WITHOUT_CONFIG</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.FAIL_STARTUP_WITHOUT_POLICIES"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.FAIL_STARTUP_WITHOUT_POLICIES</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LLM_CONTAINER"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.LLM_CONTAINER</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.LOG_LEVEL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.LOG_LEVEL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BATCH_SIZE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BATCH_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.MAX_REQUEST_BUFFER_BYTES"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.MAX_REQUEST_BUFFER_BYTES</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.POLICY_BASE_DIR"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.POLICY_BASE_DIR</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_BUCKET_NAME"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.S3_CONFIG_BUCKET_NAME</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_PREFIX"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.S3_CONFIG_PREFIX</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.S3_CONFIG_SYNC</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_CADENCE"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.S3_CONFIG_SYNC_CADENCE</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_INTERVAL"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.S3_CONFIG_SYNC_INTERVAL</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.S3_CONFIG_SYNC_ROLE_ARN"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.S3_CONFIG_SYNC_ROLE_ARN</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.TRACE_ENDPOINT"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.TRACE_ENDPOINT</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvVarNames.WHYLABS_API_KEY"><code class="docutils literal notranslate"><span class="pre">EnvVarNames.WHYLABS_API_KEY</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables</span></code></a><ul>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.assert_llm_endpoint"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.assert_llm_endpoint()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.auth_disabled"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.auth_disabled()</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.auto_pull_whylabs_policy_model_ids"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.auto_pull_whylabs_policy_model_ids</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.aws_sqs_dlq_url"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.aws_sqs_dlq_url</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.aws_sqs_url"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.aws_sqs_url</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.config_sync_cadence"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.config_sync_cadence</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.config_sync_interval"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.config_sync_interval</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.container_password"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.container_password</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.default_dataset_cadence</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_org_id"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.default_whylabs_org_id</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_upload_cadence"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.default_whylabs_upload_cadence</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.default_whylabs_upload_interval"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.default_whylabs_upload_interval</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.disable_container_password"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.disable_container_password</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.disable_tracing"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.disable_tracing</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.fail_startup_without_config"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.fail_startup_without_config</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.fail_startup_without_policies"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.fail_startup_without_policies</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.llm_container"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.llm_container</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.log_level"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.log_level</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.policy_base_dir"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.policy_base_dir</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_bucket_name"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.s3_config_bucket_name</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_prefix"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.s3_config_prefix</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.s3_config_sync</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync_cadence"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.s3_config_sync_cadence</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.s3_config_sync_interval"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.s3_config_sync_interval</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.trace_endpoint"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.trace_endpoint</span></code></a></li>
-<li><a class="reference internal" href="#whylogs_container.whylabs.container.environment.EnvironmentVariables.whylabs_api_key"><code class="docutils literal notranslate"><span class="pre">EnvironmentVariables.whylabs_api_key</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.file_read_utils">whylogs_container.whylabs.container.file_read_utils module</a><ul>
@@ -2129,6 +1981,51 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.routes">whylogs_container.whylabs.container.routes module</a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.routes.init_routes"><code class="docutils literal notranslate"><span class="pre">init_routes()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-whylogs_container.whylabs.container.server_config">whylogs_container.whylabs.container.server_config module</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.CustomSettingsSource"><code class="docutils literal notranslate"><span class="pre">CustomSettingsSource</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.CustomSettingsSource.prepare_field_value"><code class="docutils literal notranslate"><span class="pre">CustomSettingsSource.prepare_field_value()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig"><code class="docutils literal notranslate"><span class="pre">ServerConfig</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.assert_llm_endpoint"><code class="docutils literal notranslate"><span class="pre">ServerConfig.assert_llm_endpoint()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.auth_disabled"><code class="docutils literal notranslate"><span class="pre">ServerConfig.auth_disabled()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.auto_pull_whylabs_policy_model_ids"><code class="docutils literal notranslate"><span class="pre">ServerConfig.auto_pull_whylabs_policy_model_ids</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.aws_sqs_dlq_url"><code class="docutils literal notranslate"><span class="pre">ServerConfig.aws_sqs_dlq_url</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.aws_sqs_url"><code class="docutils literal notranslate"><span class="pre">ServerConfig.aws_sqs_url</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.check_field_b_if_field_a"><code class="docutils literal notranslate"><span class="pre">ServerConfig.check_field_b_if_field_a()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.config_sync_cadence"><code class="docutils literal notranslate"><span class="pre">ServerConfig.config_sync_cadence</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.config_sync_interval"><code class="docutils literal notranslate"><span class="pre">ServerConfig.config_sync_interval</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.container_password"><code class="docutils literal notranslate"><span class="pre">ServerConfig.container_password</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.default_dataset_cadence"><code class="docutils literal notranslate"><span class="pre">ServerConfig.default_dataset_cadence</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.default_whylabs_upload_cadence"><code class="docutils literal notranslate"><span class="pre">ServerConfig.default_whylabs_upload_cadence</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.default_whylabs_upload_interval"><code class="docutils literal notranslate"><span class="pre">ServerConfig.default_whylabs_upload_interval</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.disable_container_password"><code class="docutils literal notranslate"><span class="pre">ServerConfig.disable_container_password</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.disable_tracing"><code class="docutils literal notranslate"><span class="pre">ServerConfig.disable_tracing</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.fail_startup_without_config"><code class="docutils literal notranslate"><span class="pre">ServerConfig.fail_startup_without_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.fail_startup_without_policies"><code class="docutils literal notranslate"><span class="pre">ServerConfig.fail_startup_without_policies</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.llm_container"><code class="docutils literal notranslate"><span class="pre">ServerConfig.llm_container</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.log_level"><code class="docutils literal notranslate"><span class="pre">ServerConfig.log_level</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.max_request_batch_size"><code class="docutils literal notranslate"><span class="pre">ServerConfig.max_request_batch_size</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.max_request_buffer_bytes"><code class="docutils literal notranslate"><span class="pre">ServerConfig.max_request_buffer_bytes</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">ServerConfig.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.model_config"><code class="docutils literal notranslate"><span class="pre">ServerConfig.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.model_fields"><code class="docutils literal notranslate"><span class="pre">ServerConfig.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.parse_log_level"><code class="docutils literal notranslate"><span class="pre">ServerConfig.parse_log_level()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.policy_base_dir"><code class="docutils literal notranslate"><span class="pre">ServerConfig.policy_base_dir</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_bucket_name"><code class="docutils literal notranslate"><span class="pre">ServerConfig.s3_config_bucket_name</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_prefix"><code class="docutils literal notranslate"><span class="pre">ServerConfig.s3_config_prefix</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync"><code class="docutils literal notranslate"><span class="pre">ServerConfig.s3_config_sync</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync_cadence"><code class="docutils literal notranslate"><span class="pre">ServerConfig.s3_config_sync_cadence</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.s3_config_sync_interval"><code class="docutils literal notranslate"><span class="pre">ServerConfig.s3_config_sync_interval</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.settings_customise_sources"><code class="docutils literal notranslate"><span class="pre">ServerConfig.settings_customise_sources()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.trace_endpoint"><code class="docutils literal notranslate"><span class="pre">ServerConfig.trace_endpoint</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.ServerConfig.whylabs_api_key"><code class="docutils literal notranslate"><span class="pre">ServerConfig.whylabs_api_key</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.get_server_config"><code class="docutils literal notranslate"><span class="pre">get_server_config()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.server_config.set_server_config"><code class="docutils literal notranslate"><span class="pre">set_server_config()</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-whylogs_container.whylabs.container.startup">whylogs_container.whylabs.container.startup module</a><ul>

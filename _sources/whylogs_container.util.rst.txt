@@ -4,6 +4,14 @@ whylogs\_container.util package
 Submodules
 ----------
 
+whylogs\_container.util.coroutine\_util module
+----------------------------------------------
+
+.. automodule:: whylogs_container.util.coroutine_util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 whylogs\_container.util.signal\_util module
 -------------------------------------------
 
