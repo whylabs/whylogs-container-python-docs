@@ -12,14 +12,6 @@ whylogs\_container.whylabs.container.policy.hashable\_dict module
    :undoc-members:
    :show-inheritance:
 
-whylogs\_container.whylabs.container.policy.normalized\_scores module
----------------------------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.container.policy.normalized_scores
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 whylogs\_container.whylabs.container.policy.policy module
 ---------------------------------------------------------
 
@@ -32,14 +24,6 @@ whylogs\_container.whylabs.container.policy.policy\_0\_0\_1 module
 ------------------------------------------------------------------
 
 .. automodule:: whylogs_container.whylabs.container.policy.policy_0_0_1
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-whylogs\_container.whylabs.container.policy.ruleset module
-----------------------------------------------------------
-
-.. automodule:: whylogs_container.whylabs.container.policy.ruleset
    :members:
    :undoc-members:
    :show-inheritance:
