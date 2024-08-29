@@ -461,6 +461,52 @@
         ]
       }
     },
+    "/debug/embeddings": {
+      "post": {
+        "tags": [
+          "debug"
+        ],
+        "summary": "Generate embeddings for inputs",
+        "operationId": "debug_embeddings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmbeddingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvaluationResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
     "/list_metrics": {
       "get": {
         "tags": [
@@ -708,6 +754,45 @@
           "policy"
         ],
         "title": "DebugLLMValidateRequest"
+      },
+      "EmbeddingRequest": {
+        "properties": {
+          "prompt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Prompt"
+          },
+          "response": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response"
+          },
+          "context": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/InputContext"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "EmbeddingRequest"
       },
       "EvaluationResult": {
         "properties": {
@@ -1157,6 +1242,11 @@
                 "type": "null"
               }
             ]
+          },
+          "remote_metric_timeout_sec": {
+            "type": "number",
+            "title": "Remote Metric Timeout Sec",
+            "default": 20
           }
         },
         "type": "object",
