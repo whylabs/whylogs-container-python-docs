@@ -1,0 +1,16 @@
+whylogs\_container.whylabs.container.policy
+===========================================
+
+.. automodule:: whylogs_container.whylabs.container.policy
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   hashable_dict
+   policy
+   policy_0_0_1
+   scores

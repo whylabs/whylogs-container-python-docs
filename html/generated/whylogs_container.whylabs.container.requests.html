@@ -1,0 +1,822 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="whylogs_container.whylabs.container.responses" href="whylogs_container.whylabs.container.responses.html" /><link rel="prev" title="whylogs_container.whylabs.container.policy_downloader" href="whylogs_container.whylabs.container.policy_downloader.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
+        <title>whylogs_container.whylabs.container.requests - whylogs_container 2.0.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">whylogs_container 2.0.2 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">whylogs_container 2.0.2 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="whylogs_container.html">whylogs_container</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of whylogs_container</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="whylogs_container.util.html">whylogs_container.util</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of whylogs_container.util</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.util.coroutine_util.html">whylogs_container.util.coroutine_util</a></li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.util.signal_util.html">whylogs_container.util.signal_util</a></li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.util.string_util.html">whylogs_container.util.string_util</a></li>
+<li class="toctree-l3"><a class="reference internal" href="whylogs_container.util.string_util_test.html">whylogs_container.util.string_util_test</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="whylogs_container.whylabs.html">whylogs_container.whylabs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="whylogs_container.whylabs.container.html">whylogs_container.whylabs.container</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.container</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.auth.html">whylogs_container.whylabs.container.auth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.config.html">whylogs_container.whylabs.container.config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.config_test.html">whylogs_container.whylabs.container.config_test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.file_read_utils.html">whylogs_container.whylabs.container.file_read_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.lazy.html">whylogs_container.whylabs.container.lazy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.log_util.html">whylogs_container.whylabs.container.log_util</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.otel.html">whylogs_container.whylabs.container.otel</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="whylogs_container.whylabs.container.policy.html">whylogs_container.whylabs.container.policy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.container.policy</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.hashable_dict.html">whylogs_container.whylabs.container.policy.hashable_dict</a></li>
+<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.policy.html">whylogs_container.whylabs.container.policy.policy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.policy_0_0_1.html">whylogs_container.whylabs.container.policy.policy_0_0_1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.scores.html">whylogs_container.whylabs.container.policy.scores</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.policy_downloader.html">whylogs_container.whylabs.container.policy_downloader</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">whylogs_container.whylabs.container.requests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.responses.html">whylogs_container.whylabs.container.responses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.routes_base.html">whylogs_container.whylabs.container.routes_base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.routes_llm.html">whylogs_container.whylabs.container.routes_llm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.routes_profiling.html">whylogs_container.whylabs.container.routes_profiling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.server_config.html">whylogs_container.whylabs.container.server_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.startup.html">whylogs_container.whylabs.container.startup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.startup_util.html">whylogs_container.whylabs.container.startup_util</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.strict_container_types.html">whylogs_container.whylabs.container.strict_container_types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.version.html">whylogs_container.whylabs.container.version</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.html">whylogs_container.whylabs.llm_validation</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.llm_validation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.actions.html">whylogs_container.whylabs.llm_validation.actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.metadata.html">whylogs_container.whylabs.llm_validation.metadata</a></li>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.llm_validation.validator.html">whylogs_container.whylabs.llm_validation.validator</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="whylogs_container.whylabs.logger.html">whylogs_container.whylabs.logger</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.logger</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.logger.logger.html">whylogs_container.whylabs.logger.logger</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="whylogs_container.whylabs.time_utils.html">whylogs_container.whylabs.time_utils</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.time_utils</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.time_utils.time_convert_utils.html">whylogs_container.whylabs.time_utils.time_convert_utils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="whylogs_container_types.html">whylogs_container_types</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-whylogs_container.whylabs.container.requests">
+<span id="whylogs-container-whylabs-container-requests"></span><h1>whylogs_container.whylabs.container.requests<a class="headerlink" href="#module-whylogs_container.whylabs.container.requests" title="Link to this heading">¶</a></h1>
+<p class="rubric">Classes</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest" title="whylogs_container.whylabs.container.requests.DebugLLMValidateRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DebugLLMValidateRequest</span></code></a>(*[, prompt, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest" title="whylogs_container.whylabs.container.requests.EmbeddingRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EmbeddingRequest</span></code></a>(*[, prompt, response, context])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.Endpoints" title="whylogs_container.whylabs.container.requests.Endpoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Endpoints</span></code></a>(value)</p></td>
+<td><p>An enumeration.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest" title="whylogs_container.whylabs.container.requests.LLMValidateRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LLMValidateRequest</span></code></a>(*[, prompt, response, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest" title="whylogs_container.whylabs.container.requests.LogEmbeddingRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogEmbeddingRequest</span></code></a>(*, dataset_id, ...)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple" title="whylogs_container.whylabs.container.requests.LogMultiple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogMultiple</span></code></a>(*, columns, data)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest" title="whylogs_container.whylabs.container.requests.LogRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogRequest</span></code></a>(*, datasetId, multiple[, timestamp])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage" title="whylogs_container.whylabs.container.requests.PubSubMessage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PubSubMessage</span></code></a>(*, attributes, data, ...)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest" title="whylogs_container.whylabs.container.requests.PubSubRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PubSubRequest</span></code></a>(*, subscription, message)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.DebugLLMValidateRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">DebugLLMValidateRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">InputContext</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RunOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest" title="whylogs_container.whylabs.container.requests.LLMValidateRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">LLMValidateRequest</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'populate_by_name':</span> <span class="pre">True}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'additional_data':</span> <span class="pre">FieldInfo(annotation=Dict[str,</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">float]],</span> <span class="pre">required=False,</span> <span class="pre">default_factory=&lt;lambda&gt;),</span> <span class="pre">'context':</span> <span class="pre">FieldInfo(annotation=Union[InputContext,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'dataset_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias='datasetId',</span> <span class="pre">alias_priority=2),</span> <span class="pre">'id':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'options':</span> <span class="pre">FieldInfo(annotation=Union[RunOptions,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'policy':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True),</span> <span class="pre">'prompt':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'response':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'timestamp':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default_factory=&lt;lambda&gt;)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.policy">
+<span class="sig-name descname"><span class="pre">policy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.policy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">EmbeddingRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">InputContext</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest.context">
+<span class="sig-name descname"><span class="pre">context</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">InputContext</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.context" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'populate_by_name':</span> <span class="pre">True}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'context':</span> <span class="pre">FieldInfo(annotation=Union[InputContext,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'prompt':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'response':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest.prompt">
+<span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.prompt" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.EmbeddingRequest.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.response" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.Endpoints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">Endpoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.Endpoints" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.Endpoints.DebugEvaluate">
+<span class="sig-name descname"><span class="pre">DebugEvaluate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/debug/evaluate'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.Endpoints.DebugEvaluate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.Endpoints.Evaluate">
+<span class="sig-name descname"><span class="pre">Evaluate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/evaluate'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.Endpoints.Evaluate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.Endpoints.LogLLM">
+<span class="sig-name descname"><span class="pre">LogLLM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/log/llm'</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.Endpoints.LogLLM" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LLMValidateRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">InputContext</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RunOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.additional_data">
+<span class="sig-name descname"><span class="pre">additional_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.additional_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.context">
+<span class="sig-name descname"><span class="pre">context</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">InputContext</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.context" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.dataset_id">
+<span class="sig-name descname"><span class="pre">dataset_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.dataset_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'forbid',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'populate_by_name':</span> <span class="pre">True}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'additional_data':</span> <span class="pre">FieldInfo(annotation=Dict[str,</span> <span class="pre">Union[str,</span> <span class="pre">int,</span> <span class="pre">float]],</span> <span class="pre">required=False,</span> <span class="pre">default_factory=&lt;lambda&gt;),</span> <span class="pre">'context':</span> <span class="pre">FieldInfo(annotation=Union[InputContext,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'dataset_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias='datasetId',</span> <span class="pre">alias_priority=2),</span> <span class="pre">'id':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'options':</span> <span class="pre">FieldInfo(annotation=Union[RunOptions,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'prompt':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'response':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False),</span> <span class="pre">'timestamp':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=False,</span> <span class="pre">default_factory=&lt;lambda&gt;)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">RunOptions</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.options" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.prompt">
+<span class="sig-name descname"><span class="pre">prompt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.prompt" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.replace_old_times">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">replace_old_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.replace_old_times" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.response">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.response" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.timestamp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.to_data_dict">
+<span class="sig-name descname"><span class="pre">to_data_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataDict</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.to_data_dict" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.to_dataframe" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LLMValidateRequest.to_row">
+<span class="sig-name descname"><span class="pre">to_row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">InputContext</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.to_row" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogEmbeddingRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embeddings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.datasetId">
+<span class="sig-name descname"><span class="pre">datasetId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.datasetId" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.embeddings">
+<span class="sig-name descname"><span class="pre">embeddings</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.embeddings" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'datasetId':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias='dataset_id',</span> <span class="pre">alias_priority=2),</span> <span class="pre">'embeddings':</span> <span class="pre">FieldInfo(annotation=Dict[str,</span> <span class="pre">Union[List[List[float]],</span> <span class="pre">List[List[int]],</span> <span class="pre">List[List[str]]]],</span> <span class="pre">required=True),</span> <span class="pre">'timestamp':</span> <span class="pre">FieldInfo(annotation=int,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogEmbeddingRequest.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.timestamp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogMultiple">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogMultiple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogMultiple" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogMultiple.columns">
+<span class="sig-name descname"><span class="pre">columns</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogMultiple.columns" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogMultiple.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogMultiple.data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogMultiple.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogMultiple.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogMultiple.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogMultiple.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogMultiple.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'columns':</span> <span class="pre">FieldInfo(annotation=Sequence[str],</span> <span class="pre">required=True),</span> <span class="pre">'data':</span> <span class="pre">FieldInfo(annotation=Sequence[Sequence[Union[str,</span> <span class="pre">int,</span> <span class="pre">float,</span> <span class="pre">bool,</span> <span class="pre">List[float],</span> <span class="pre">List[int],</span> <span class="pre">List[str],</span> <span class="pre">NoneType,</span> <span class="pre">List[List[float]],</span> <span class="pre">List[List[int]],</span> <span class="pre">List[List[str]]]]],</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogMultiple.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">LogRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple" title="whylogs_container.whylabs.container.requests.LogMultiple"><span class="pre">LogMultiple</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest.dataset_id">
+<span class="sig-name descname"><span class="pre">dataset_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest.dataset_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'dataset_id':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias='datasetId',</span> <span class="pre">alias_priority=2),</span> <span class="pre">'multiple':</span> <span class="pre">FieldInfo(annotation=LogMultiple,</span> <span class="pre">required=True),</span> <span class="pre">'timestamp':</span> <span class="pre">FieldInfo(annotation=Union[int,</span> <span class="pre">NoneType],</span> <span class="pre">required=False)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest.multiple">
+<span class="sig-name descname"><span class="pre">multiple</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple" title="whylogs_container.whylabs.container.requests.LogMultiple"><span class="pre">LogMultiple</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest.multiple" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.LogRequest.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.LogRequest.timestamp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">PubSubMessage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.attributes">
+<span class="sig-name descname"><span class="pre">attributes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.attributes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.messageId">
+<span class="sig-name descname"><span class="pre">messageId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.messageId" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'attributes':</span> <span class="pre">FieldInfo(annotation=Dict[str,</span> <span class="pre">str],</span> <span class="pre">required=True),</span> <span class="pre">'data':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True),</span> <span class="pre">'messageId':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias='message_id',</span> <span class="pre">alias_priority=2),</span> <span class="pre">'publishTime':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">alias='publish_time',</span> <span class="pre">alias_priority=2)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubMessage.publishTime">
+<span class="sig-name descname"><span class="pre">publishTime</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubMessage.publishTime" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubRequest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.requests.</span></span><span class="sig-name descname"><span class="pre">PubSubRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subscription</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage" title="whylogs_container.whylabs.container.requests.PubSubMessage"><span class="pre">PubSubMessage</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubRequest.message">
+<span class="sig-name descname"><span class="pre">message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage" title="whylogs_container.whylabs.container.requests.PubSubMessage"><span class="pre">PubSubMessage</span></a></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubRequest.message" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubRequest.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubRequest.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubRequest.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubRequest.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubRequest.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'message':</span> <span class="pre">FieldInfo(annotation=PubSubMessage,</span> <span class="pre">required=True),</span> <span class="pre">'subscription':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubRequest.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.requests.PubSubRequest.subscription">
+<span class="sig-name descname"><span class="pre">subscription</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.requests.PubSubRequest.subscription" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="whylogs_container.whylabs.container.responses.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">whylogs_container.whylabs.container.responses</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="whylogs_container.whylabs.container.policy_downloader.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">whylogs_container.whylabs.container.policy_downloader</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, anthony@whylabs.ai, murilo@whylabs.ai
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">whylogs_container.whylabs.container.requests</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest"><code class="docutils literal notranslate"><span class="pre">DebugLLMValidateRequest</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">DebugLLMValidateRequest.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_config"><code class="docutils literal notranslate"><span class="pre">DebugLLMValidateRequest.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">DebugLLMValidateRequest.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.DebugLLMValidateRequest.policy"><code class="docutils literal notranslate"><span class="pre">DebugLLMValidateRequest.policy</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.context"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest.context</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.model_config"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.prompt"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest.prompt</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.EmbeddingRequest.response"><code class="docutils literal notranslate"><span class="pre">EmbeddingRequest.response</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.Endpoints"><code class="docutils literal notranslate"><span class="pre">Endpoints</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.Endpoints.DebugEvaluate"><code class="docutils literal notranslate"><span class="pre">Endpoints.DebugEvaluate</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.Endpoints.Evaluate"><code class="docutils literal notranslate"><span class="pre">Endpoints.Evaluate</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.Endpoints.LogLLM"><code class="docutils literal notranslate"><span class="pre">Endpoints.LogLLM</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.additional_data"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.additional_data</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.context"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.context</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.dataset_id"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.dataset_id</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.id"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.id</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.model_config"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.options"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.options</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.prompt"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.prompt</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.replace_old_times"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.replace_old_times()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.response"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.response</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.timestamp"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.timestamp</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.to_data_dict"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.to_data_dict()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.to_dataframe"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.to_dataframe()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LLMValidateRequest.to_row"><code class="docutils literal notranslate"><span class="pre">LLMValidateRequest.to_row()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.datasetId"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.datasetId</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.embeddings"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.embeddings</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_config"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogEmbeddingRequest.timestamp"><code class="docutils literal notranslate"><span class="pre">LogEmbeddingRequest.timestamp</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple"><code class="docutils literal notranslate"><span class="pre">LogMultiple</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple.columns"><code class="docutils literal notranslate"><span class="pre">LogMultiple.columns</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple.data"><code class="docutils literal notranslate"><span class="pre">LogMultiple.data</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">LogMultiple.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple.model_config"><code class="docutils literal notranslate"><span class="pre">LogMultiple.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogMultiple.model_fields"><code class="docutils literal notranslate"><span class="pre">LogMultiple.model_fields</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest"><code class="docutils literal notranslate"><span class="pre">LogRequest</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest.dataset_id"><code class="docutils literal notranslate"><span class="pre">LogRequest.dataset_id</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">LogRequest.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest.model_config"><code class="docutils literal notranslate"><span class="pre">LogRequest.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">LogRequest.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest.multiple"><code class="docutils literal notranslate"><span class="pre">LogRequest.multiple</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.LogRequest.timestamp"><code class="docutils literal notranslate"><span class="pre">LogRequest.timestamp</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage"><code class="docutils literal notranslate"><span class="pre">PubSubMessage</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.attributes"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.attributes</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.data"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.data</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.messageId"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.messageId</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.model_config"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.model_fields"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubMessage.publishTime"><code class="docutils literal notranslate"><span class="pre">PubSubMessage.publishTime</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest"><code class="docutils literal notranslate"><span class="pre">PubSubRequest</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest.message"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.message</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest.model_config"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.model_config</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest.model_fields"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.model_fields</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.requests.PubSubRequest.subscription"><code class="docutils literal notranslate"><span class="pre">PubSubRequest.subscription</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=c2377ec0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
+    </body>
+</html>

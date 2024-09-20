@@ -5,6 +5,76 @@
     "version": "0.1.0"
   },
   "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "manage"
+        ],
+        "summary": "Health",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "tags": [
+          "manage"
+        ],
+        "summary": "Status",
+        "operationId": "status",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
+    "/logDebugInfo": {
+      "post": {
+        "tags": [
+          "manage"
+        ],
+        "summary": "Log Debug Info",
+        "description": "Log the output of /status",
+        "operationId": "debug_info",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
+      }
+    },
     "/log": {
       "post": {
         "tags": [
@@ -150,76 +220,6 @@
         ],
         "summary": "Publish Profiles",
         "operationId": "publish",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ]
-      }
-    },
-    "/health": {
-      "get": {
-        "tags": [
-          "manage"
-        ],
-        "summary": "Health",
-        "operationId": "health",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/status": {
-      "get": {
-        "tags": [
-          "manage"
-        ],
-        "summary": "Status",
-        "operationId": "status",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/StatusResponse"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ]
-      }
-    },
-    "/logDebugInfo": {
-      "post": {
-        "tags": [
-          "manage"
-        ],
-        "summary": "Log Debug Info",
-        "description": "Log the output of /status",
-        "operationId": "debug_info",
         "responses": {
           "200": {
             "description": "Successful Response",

@@ -1,0 +1,12 @@
+whylogs\_container.whylabs.container.policy.hashable\_dict
+==========================================================
+
+.. automodule:: whylogs_container.whylabs.container.policy.hashable_dict
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      HashableDict
+   

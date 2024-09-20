@@ -1,0 +1,18 @@
+whylogs\_container.whylabs.container.startup\_util
+==================================================
+
+.. automodule:: whylogs_container.whylabs.container.startup_util
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      fake_llm_deps
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AutoMock
+   

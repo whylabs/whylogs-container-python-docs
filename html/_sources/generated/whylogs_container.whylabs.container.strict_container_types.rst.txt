@@ -1,0 +1,13 @@
+whylogs\_container.whylabs.container.strict\_container\_types
+=============================================================
+
+.. automodule:: whylogs_container.whylabs.container.strict_container_types
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      StrictContainerConfiguration
+      StrictLangkitOptions
+   

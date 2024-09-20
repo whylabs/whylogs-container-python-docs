@@ -1,7 +1,0 @@
-whylogs_container
-=================
-
-.. toctree::
-   :maxdepth: 4
-
-   whylogs_container

@@ -1,0 +1,13 @@
+whylogs\_container.whylabs.container.routes\_llm
+================================================
+
+.. automodule:: whylogs_container.whylabs.container.routes_llm
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      build_carrier
+      init_llm_routes
+   

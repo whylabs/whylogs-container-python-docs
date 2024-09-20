@@ -1,0 +1,23 @@
+whylogs\_container.whylabs.container.otel
+=========================================
+
+.. automodule:: whylogs_container.whylabs.container.otel
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      extract_score_causes
+      get_current_carrier
+      get_tracer
+      init_otel
+      span_value
+      trace_langkit_result
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AttributePrefix
+   

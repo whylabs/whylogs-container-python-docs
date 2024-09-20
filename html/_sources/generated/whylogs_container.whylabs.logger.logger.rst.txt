@@ -1,0 +1,19 @@
+whylogs\_container.whylabs.logger.logger
+========================================
+
+.. automodule:: whylogs_container.whylabs.logger.logger
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      create_logger
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ContainerLoggerFactory
+      ContainerProcessRollingLogger
+   

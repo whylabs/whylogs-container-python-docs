@@ -1,0 +1,12 @@
+whylogs\_container.util.signal\_util
+====================================
+
+.. automodule:: whylogs_container.util.signal_util
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      suspended_signals
+   

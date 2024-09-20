@@ -1,0 +1,12 @@
+whylogs\_container.whylabs.container.log\_util
+==============================================
+
+.. automodule:: whylogs_container.whylabs.container.log_util
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      add_message_filter
+   

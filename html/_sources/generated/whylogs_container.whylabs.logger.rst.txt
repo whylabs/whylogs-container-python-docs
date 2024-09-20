@@ -1,0 +1,13 @@
+whylogs\_container.whylabs.logger
+=================================
+
+.. automodule:: whylogs_container.whylabs.logger
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   logger

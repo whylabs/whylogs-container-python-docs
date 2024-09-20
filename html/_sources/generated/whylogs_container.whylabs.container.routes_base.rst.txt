@@ -1,0 +1,12 @@
+whylogs\_container.whylabs.container.routes\_base
+=================================================
+
+.. automodule:: whylogs_container.whylabs.container.routes_base
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      init_routes_base
+   

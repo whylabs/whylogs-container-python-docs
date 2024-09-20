@@ -1,0 +1,12 @@
+whylogs\_container.whylabs.container.file\_read\_utils
+======================================================
+
+.. automodule:: whylogs_container.whylabs.container.file_read_utils
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      load_policy_from_str
+   
