@@ -1226,6 +1226,11 @@
               }
             ],
             "title": "By Required Inputs"
+          },
+          "allow_empty_results": {
+            "type": "boolean",
+            "title": "Allow Empty Results",
+            "default": true
           }
         },
         "type": "object",

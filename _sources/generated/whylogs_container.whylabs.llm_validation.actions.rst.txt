@@ -9,6 +9,7 @@ whylogs\_container.whylabs.llm\_validation.actions
    .. autosummary::
    
       get_action
+      worst_action
    
    .. rubric:: Classes
 

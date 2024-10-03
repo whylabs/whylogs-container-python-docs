@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="whylogs_container.whylabs.llm_validation.metadata" href="whylogs_container.whylabs.llm_validation.metadata.html" /><link rel="prev" title="whylogs_container.whylabs.llm_validation" href="whylogs_container.whylabs.llm_validation.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
-        <title>whylogs_container.whylabs.llm_validation.actions - whylogs_container 2.0.2 documentation</title>
+        <title>whylogs_container.whylabs.llm_validation.actions - whylogs_container 2.0.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">whylogs_container 2.0.2 documentation</div></a>
+      <a href="../index.html"><div class="brand">whylogs_container 2.0.3 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">whylogs_container 2.0.2 documentation</span>
+  <span class="sidebar-brand-text">whylogs_container 2.0.3 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -254,6 +254,9 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.get_action" title="whylogs_container.whylabs.llm_validation.actions.get_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_action</span></code></a>(result, config, dataset_id)</p></td>
 <td><p></p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.worst_action" title="whylogs_container.whylabs.llm_validation.actions.worst_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">worst_action</span></code></a>(action, score_action)</p></td>
+<td><p>Pick the worst action between a normal workflow and a score workflow that consumed the metrics of the former.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -333,6 +336,13 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
 <span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.actions.</span></span><span class="sig-name descname"><span class="pre">get_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">WorkflowResult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="whylogs_container.whylabs.container.config.html#whylogs_container.whylabs.container.config.ConfigInstance" title="whylogs_container.whylabs.container.config.ConfigInstance"><span class="pre">ConfigInstance</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.Action" title="whylogs_container.whylabs.llm_validation.actions.Action"><span class="pre">Action</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.actions.get_action" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.llm_validation.actions.worst_action">
+<span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.llm_validation.actions.</span></span><span class="sig-name descname"><span class="pre">worst_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.Action" title="whylogs_container.whylabs.llm_validation.actions.Action"><span class="pre">Action</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">score_action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.Action" title="whylogs_container.whylabs.llm_validation.actions.Action"><span class="pre">Action</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.Action" title="whylogs_container.whylabs.llm_validation.actions.Action"><span class="pre">Action</span></a></span></span><a class="headerlink" href="#whylogs_container.whylabs.llm_validation.actions.worst_action" title="Link to this definition">¶</a></dt>
+<dd><p>Pick the worst action between a normal workflow and a score workflow that consumed the metrics of the former.</p>
+<p>If we have both then we prefer the one with the more severe flag. If they have the same flag level then we prefer the score_action.</p>
+</dd></dl>
+
 </section>
 
         </article>
@@ -406,6 +416,7 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
 </ul>
 </li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.get_action"><code class="docutils literal notranslate"><span class="pre">get_action()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.llm_validation.actions.worst_action"><code class="docutils literal notranslate"><span class="pre">worst_action()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -417,7 +428,7 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=c2377ec0"></script>
+</div><script src="../_static/documentation_options.js?v=664ffad9"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
