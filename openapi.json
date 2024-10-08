@@ -747,7 +747,6 @@
             "title": "Policy"
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "datasetId",
@@ -790,7 +789,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "title": "EmbeddingRequest"
       },
@@ -982,7 +980,6 @@
             ]
           }
         },
-        "additionalProperties": false,
         "type": "object",
         "required": [
           "datasetId"
