@@ -10,7 +10,7 @@ whylogs\_container.whylabs.container.policy
    :toctree:
    :recursive:
 
-   hashable_dict
+   hashable
    policy
    policy_0_0_1
    scores

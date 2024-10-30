@@ -1,0 +1,19 @@
+whylogs\_container.whylabs.container.whylabs\_client
+====================================================
+
+.. automodule:: whylogs_container.whylabs.container.whylabs_client
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      get_whylabs_client
+      reset_whylabs_client
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      WhyLabsClient
+   

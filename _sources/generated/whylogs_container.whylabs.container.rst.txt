@@ -10,7 +10,6 @@ whylogs\_container.whylabs.container
    :toctree:
    :recursive:
 
-   auth
    config
    config_test
    file_read_utils
@@ -18,7 +17,6 @@ whylogs\_container.whylabs.container
    log_util
    otel
    policy
-   policy_downloader
    requests
    responses
    routes_base
@@ -29,3 +27,4 @@ whylogs\_container.whylabs.container
    startup_util
    strict_container_types
    version
+   whylabs_client

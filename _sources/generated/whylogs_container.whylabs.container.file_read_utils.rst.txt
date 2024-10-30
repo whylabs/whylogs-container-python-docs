@@ -8,5 +8,6 @@ whylogs\_container.whylabs.container.file\_read\_utils
 
    .. autosummary::
    
+      generate_validation_report
       load_policy_from_str
    
