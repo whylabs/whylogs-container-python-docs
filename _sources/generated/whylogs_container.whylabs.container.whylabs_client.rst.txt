@@ -15,5 +15,6 @@ whylogs\_container.whylabs.container.whylabs\_client
 
    .. autosummary::
    
+      ClientWithFallback
       WhyLabsClient
    

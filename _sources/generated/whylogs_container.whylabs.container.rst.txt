@@ -12,7 +12,6 @@ whylogs\_container.whylabs.container
 
    config
    config_test
-   file_read_utils
    lazy
    log_util
    otel

@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="whylogs_container.whylabs.llm_validation" href="whylogs_container.whylabs.llm_validation.html" /><link rel="prev" title="whylogs_container.whylabs.container.version" href="whylogs_container.whylabs.container.version.html" />
 
     <!-- Generated with Sphinx 7.4.7 and Furo 2023.09.10 -->
-        <title>whylogs_container.whylabs.container.whylabs_client - whylogs_container 2.1.0 documentation</title>
+        <title>whylogs_container.whylabs.container.whylabs_client - whylogs_container 2.2.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">whylogs_container 2.1.0 documentation</div></a>
+      <a href="../index.html"><div class="brand">whylogs_container 2.2.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -146,7 +146,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
-  <span class="sidebar-brand-text">whylogs_container 2.1.0 documentation</span>
+  <span class="sidebar-brand-text">whylogs_container 2.2.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -167,14 +167,14 @@
 <li class="toctree-l3 current has-children"><a class="reference internal" href="whylogs_container.whylabs.container.html">whylogs_container.whylabs.container</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.container</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.config.html">whylogs_container.whylabs.container.config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.config_test.html">whylogs_container.whylabs.container.config_test</a></li>
-<li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.file_read_utils.html">whylogs_container.whylabs.container.file_read_utils</a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.lazy.html">whylogs_container.whylabs.container.lazy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.log_util.html">whylogs_container.whylabs.container.log_util</a></li>
 <li class="toctree-l4"><a class="reference internal" href="whylogs_container.whylabs.container.otel.html">whylogs_container.whylabs.container.otel</a></li>
 <li class="toctree-l4 has-children"><a class="reference internal" href="whylogs_container.whylabs.container.policy.html">whylogs_container.whylabs.container.policy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of whylogs_container.whylabs.container.policy</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.hashable.html">whylogs_container.whylabs.container.policy.hashable</a></li>
-<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.policy.html">whylogs_container.whylabs.container.policy.policy</a></li>
 <li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.policy_0_0_1.html">whylogs_container.whylabs.container.policy.policy_0_0_1</a></li>
+<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.policy_0_1_0.html">whylogs_container.whylabs.container.policy.policy_0_1_0</a></li>
+<li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.policy_parsing.html">whylogs_container.whylabs.container.policy.policy_parsing</a></li>
 <li class="toctree-l5"><a class="reference internal" href="whylogs_container.whylabs.container.policy.scores.html">whylogs_container.whylabs.container.policy.scores</a></li>
 </ul>
 </li>
@@ -263,12 +263,36 @@
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient" title="whylogs_container.whylabs.container.whylabs_client.WhyLabsClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WhyLabsClient</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback" title="whylogs_container.whylabs.container.whylabs_client.ClientWithFallback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClientWithFallback</span></code></a>(cache_client, fallback_client)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient" title="whylogs_container.whylabs.container.whylabs_client.WhyLabsClient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WhyLabsClient</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<dl class="py class">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.ClientWithFallback">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.whylabs_client.</span></span><span class="sig-name descname"><span class="pre">ClientWithFallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">whylabs_client.api_client.ApiClient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fallback_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">whylabs_client.api_client.ApiClient</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.cache_client">
+<span class="sig-name descname"><span class="pre">cache_client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ApiClient</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.cache_client" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.call">
+<span class="sig-name descname"><span class="pre">call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">ApiClient</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.call" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.fallback_client">
+<span class="sig-name descname"><span class="pre">fallback_client</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ApiClient</span></em><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.fallback_client" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.WhyLabsClient">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">whylogs_container.whylabs.container.whylabs_client.</span></span><span class="sig-name descname"><span class="pre">WhyLabsClient</span></span><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient" title="Link to this definition">¶</a></dt>
@@ -279,9 +303,21 @@
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_org_policies">
+<span class="sig-name descname"><span class="pre">get_org_policies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">org_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_org_policies" title="Link to this definition">¶</a></dt>
+<dd><p>Get all of the policies for each of the datasets in an org.
+:param org_id: The organization id to get the policies for. This is only intended for use with parent/child orgs.</p>
+<blockquote>
+<div><p>The normal api key for the container is still used but a special header is set for the child org. When not in
+multi tenancy mode just leave this as None.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_policy">
 <span class="sig-name descname"><span class="pre">get_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_policy" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Get a single policy for the given dataset id.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -353,8 +389,15 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">whylogs_container.whylabs.container.whylabs_client</a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback"><code class="docutils literal notranslate"><span class="pre">ClientWithFallback</span></code></a><ul>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.cache_client"><code class="docutils literal notranslate"><span class="pre">ClientWithFallback.cache_client</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.call"><code class="docutils literal notranslate"><span class="pre">ClientWithFallback.call()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.ClientWithFallback.fallback_client"><code class="docutils literal notranslate"><span class="pre">ClientWithFallback.fallback_client</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient"><code class="docutils literal notranslate"><span class="pre">WhyLabsClient</span></code></a><ul>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_managed_orgs"><code class="docutils literal notranslate"><span class="pre">WhyLabsClient.get_managed_orgs()</span></code></a></li>
+<li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_org_policies"><code class="docutils literal notranslate"><span class="pre">WhyLabsClient.get_org_policies()</span></code></a></li>
 <li><a class="reference internal" href="#whylogs_container.whylabs.container.whylabs_client.WhyLabsClient.get_policy"><code class="docutils literal notranslate"><span class="pre">WhyLabsClient.get_policy()</span></code></a></li>
 </ul>
 </li>
@@ -371,7 +414,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=20623aea"></script>
+</div><script src="../_static/documentation_options.js?v=b21de401"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>

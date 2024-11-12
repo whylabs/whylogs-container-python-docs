@@ -4,6 +4,13 @@ whylogs\_container.whylabs.container.policy
 .. automodule:: whylogs_container.whylabs.container.policy
 
    
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      get_policy_org_id
+      get_union_schema
+   
 .. rubric:: Modules
 
 .. autosummary::
@@ -11,6 +18,7 @@ whylogs\_container.whylabs.container.policy
    :recursive:
 
    hashable
-   policy
    policy_0_0_1
+   policy_0_1_0
+   policy_parsing
    scores

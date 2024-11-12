@@ -10,6 +10,7 @@
    
       ContainerConfiguration
       DatasetCadence
+      DatasetKey
       DatasetOptions
       DatasetUploadCadence
       DatasetUploadCadenceGranularity
