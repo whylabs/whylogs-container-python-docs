@@ -17,7 +17,6 @@ whylogs\_container.whylabs.container.policy
    :toctree:
    :recursive:
 
-   hashable
    policy_0_0_1
    policy_0_1_0
    policy_parsing

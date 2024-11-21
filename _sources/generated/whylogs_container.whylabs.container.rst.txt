@@ -12,6 +12,7 @@ whylogs\_container.whylabs.container
 
    config
    config_test
+   hashable
    lazy
    log_util
    otel

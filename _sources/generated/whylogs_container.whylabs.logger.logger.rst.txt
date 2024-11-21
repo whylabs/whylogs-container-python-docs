@@ -16,4 +16,6 @@ whylogs\_container.whylabs.logger.logger
    
       ContainerLoggerFactory
       ContainerProcessRollingLogger
+      LogV1Client
+      MultiOrgWriterFactory
    
