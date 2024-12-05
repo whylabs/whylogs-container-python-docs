@@ -1,0 +1,12 @@
+whylogs\_container.whylabs.container.routes\_llm\_lightllm
+==========================================================
+
+.. automodule:: whylogs_container.whylabs.container.routes_llm_lightllm
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      init_lightllm_routes
+   

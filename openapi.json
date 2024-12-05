@@ -821,6 +821,113 @@
           }
         }
       }
+    },
+    "/v0/integrations/lightllm/evaluate": {
+      "post": {
+        "tags": [
+          "llm",
+          "lightllm",
+          "integrations"
+        ],
+        "summary": "Evaluate and log a single prompt/response pair from lightllm.",
+        "description": "Run langkit evaluation and return the validation results, as well as the generated metrics.\n\nArgs:\n    log (bool, optional): Determines if logging to WhyLabs is enabled for the request. Defaults to True.",
+        "operationId": "lightllm_evaluate_v0_integrations_lightllm_evaluate_post",
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "log",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": true,
+              "title": "Log"
+            }
+          },
+          {
+            "name": "perf_info",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Perf Info"
+            }
+          },
+          {
+            "name": "trace",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": true,
+              "title": "Trace"
+            }
+          },
+          {
+            "name": "metadata_info",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Metadata Info"
+            }
+          },
+          {
+            "name": "X-Whylabs-API-Key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Whylabs-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LLMValidateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EvaluationResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -956,6 +1063,20 @@
                 "type": "null"
               }
             ]
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metadata"
           },
           "policy": {
             "type": "string",
@@ -1193,6 +1314,20 @@
                 "type": "null"
               }
             ]
+          },
+          "metadata": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metadata"
           }
         },
         "type": "object",

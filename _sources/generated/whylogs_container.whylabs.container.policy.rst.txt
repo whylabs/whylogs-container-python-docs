@@ -10,6 +10,7 @@ whylogs\_container.whylabs.container.policy
    
       get_policy_org_id
       get_union_schema
+      get_union_type_adapter
    
 .. rubric:: Modules
 

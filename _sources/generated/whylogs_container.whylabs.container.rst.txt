@@ -21,6 +21,7 @@ whylogs\_container.whylabs.container
    responses
    routes_base
    routes_llm
+   routes_llm_lightllm
    routes_profiling
    server_config
    startup
