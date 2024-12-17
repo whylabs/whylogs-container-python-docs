@@ -24,6 +24,26 @@
         }
       }
     },
+    "/healthz": {
+      "get": {
+        "tags": [
+          "manage"
+        ],
+        "summary": "Healthz",
+        "description": "Duplicate of /health for compatibility",
+        "operationId": "healthz",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
     "/status": {
       "get": {
         "tags": [
@@ -83,38 +103,15 @@
         "summary": "Profile tabular data",
         "description": "Profile tabular data. The Swagger UI isn't able to call this currently.\n\n## Sample curl request:\n\n```bash\ncurl -X 'POST'         -H \"X-API-Key: <password>\"         -H \"Content-Type: application/json\"         'http://localhost:8000/log'         --data-raw '{\n    \"datasetId\": \"model-62\",\n    \"multiple\": {\n        \"columns\": [ \"age\", \"workclass\", \"fnlwgt\", \"education\" ],\n        \"data\": [\n            [ 25, \"Private\", 226802, \"11th\" ]\n        ]\n    }\n}'\n```\n## Sample Python client request:\n```python\nfrom whylogs_container_client import AuthenticatedClient\nimport whylogs_container_client.api.profile.log as Log\nfrom whylogs_container_client.models import LogRequest, LogMultiple\nfrom datetime import datetime\n\nclient = AuthenticatedClient(base_url=\"http://localhost:8000\", token=\"password\", prefix=\"\", auth_header_name=\"X-API-Key\")\n\ndata = LogRequest(\n    dataset_id=\"model-1\",\n    timestamp=int(datetime.now().timestamp() * 1000),\n    multiple=LogMultiple(\n        columns=[\"col1\", \"col2\"],\n        data=[[1, 2], [3, 4]],\n    )\n)\n\nresponse = Log.sync_detailed(client=client, json_body=data)\nif response.status_code != 200:\n    raise Exception(f\"Failed to log data. Status code: {response.status_code}\")\n# API is async, it won't fail and has no return body\n```\n\n## Sample Python request (using `requests`):\n```python\nimport requests\n\n# Define your API key\napi_key = \"<password>\"\n\n# API endpoint\nurl = 'http://localhost:8000/log'\n\n# Sample data\ndata = {\n    \"datasetId\": \"model-62\",\n    \"multiple\": {\n        \"columns\": [\"age\", \"workclass\", \"fnlwgt\", \"education\"],\n        \"data\": [\n            [25, \"Private\", 226802, \"11th\"]\n        ]\n    }\n}\n\n# Make the POST request\nheaders = {\"X-API-Key\": api_key}\nresponse = requests.post(url, json=data, headers=headers)\n```",
         "operationId": "log",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "requestBody": {
-          "required": true,
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/LogRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -135,7 +132,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/log-embeddings": {
@@ -146,38 +148,15 @@
         "summary": "Profile embeddings",
         "description": "This endpoint requires a custom configuration to set up before hand. See https://docs.whylabs.ai/docs/integrations-whylogs-container/\nfor setting up embeddings support.\n\nLog embeddings data. The Swagger UI isn't able to call this currently.\n\n## Sample curl request:\n\n```bash\ncurl -X 'POST'         -H \"X-API-Key: <password>\"         -H \"Content-Type: application/octet-stream\"         'http://localhost:8000/log-embeddings'         --data-raw '{\n    \"datasetId\": \"model-62\",\n    \"timestamp\": 1634235000,\n    \"embeddings\": {\n        \"embeddings\": [[0.12, 0.45, 0.33, 0.92]]\n    }\n}'\n```\n\n## Sample Python request (using `requests`):\n```python\nimport requests\n\n# Define your API key\napi_key = \"<password>\"\n\n# API endpoint\nurl = 'http://localhost:8000/log-embeddings'\n\n# Sample data\ndata = {\n    \"datasetId\": \"model-62\",\n    \"timestamp\": 1634235000,  # an example timestamp\n    \"embeddings\": {\n        \"embeddings\": [[0.12, 0.45, 0.33, 0.92]]\n    }\n}\n\n# Make the POST request\nheaders = {\"X-API-Key\": api_key, \"Content-Type\": \"application/octet-stream\"}\nresponse = requests.post(url, json=data, headers=headers)\n```",
         "operationId": "log_embeddings",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "requestBody": {
-          "required": true,
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/LogEmbeddingRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -198,7 +177,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/log-pubsub": {
@@ -281,38 +265,15 @@
         "summary": "Evaluate and log a single prompt/response pair using langkit asynchronously.",
         "description": "This is a convenience wrapper around the llm request type for calling /log, which accepts bulk data.",
         "operationId": "log_llm",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "requestBody": {
-          "required": true,
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/LLMValidateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -333,7 +294,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/evaluate/sqs": {
@@ -372,12 +338,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/evaluate": {
@@ -433,22 +394,6 @@
               "default": false,
               "title": "Metadata Info"
             }
-          },
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
           }
         ],
         "requestBody": {
@@ -492,38 +437,15 @@
         ],
         "summary": "Evaluate and log a single prompt/response pair using langkit and a policy file.",
         "operationId": "debug_evaluate",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "requestBody": {
-          "required": true,
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/DebugLLMValidateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -546,7 +468,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/debug/embeddings": {
@@ -556,38 +483,15 @@
         ],
         "summary": "Generate embeddings for inputs",
         "operationId": "debug_embeddings",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "requestBody": {
-          "required": true,
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/EmbeddingRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -610,7 +514,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/list_metrics": {
@@ -632,12 +541,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ]
+        }
       }
     },
     "/policy": {
@@ -647,11 +551,6 @@
         ],
         "summary": "Get the JSON schema for policy files",
         "operationId": "policy",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
         "parameters": [
           {
             "name": "schema_version",
@@ -698,34 +597,11 @@
     "/debug/policies": {
       "get": {
         "tags": [
-          "llm",
-          "debug"
+          "debug",
+          "llm"
         ],
         "summary": "Dump debug information about the known policies.",
         "operationId": "debug_policies",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Successful Response",
@@ -737,18 +613,13 @@
                 }
               }
             }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/health/llm/deep": {
@@ -758,29 +629,6 @@
         ],
         "summary": "Deep Health",
         "operationId": "health_llm_deep",
-        "security": [
-          {
-            "APIKeyHeader": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Successful Response",
@@ -789,18 +637,13 @@
                 "schema": {}
               }
             }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
           }
-        }
+        },
+        "security": [
+          {
+            "APIKeyHeader": []
+          }
+        ]
       }
     },
     "/ui/policy": {
@@ -876,22 +719,6 @@
               "type": "boolean",
               "default": false,
               "title": "Metadata Info"
-            }
-          },
-          {
-            "name": "X-Whylabs-API-Key",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Whylabs-Api-Key"
             }
           }
         ],
